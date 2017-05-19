@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="false"
+    android:layout_centerInParent="false"
+    android:layout_centerVertical="false"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.bases.caminatacr.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0099cc"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_blue_dark"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linearUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lbl_Usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Usuario       "/>
+            <EditText
+                android:id="@+id/txt_Username"
+                android:layout_marginLeft="50dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearPassword"
+            android:layout_alignTop="@+id/linearUsuario"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Contraseña "/>
+
+            <EditText
+                android:id="@+id/txt_PassWord"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearNombre"
+            android:layout_alignTop="@+id/linearPassword"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Nombre       "/>
+
+            <EditText
+                android:id="@+id/txt_Nombre"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearApellido1"
+            android:layout_alignTop="@+id/linearNombre"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="PrimerApellido "/>
+
+            <EditText
+                android:id="@+id/txt_Apellido1"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp" />
+
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/linearApellido2"
+        android:layout_alignTop="@+id/linearApellido1"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="SegundoApellido"/>
+
+        <EditText
+            android:id="@+id/txt_Apellido2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearAlias"
+            android:layout_alignTop="@+id/linearApellido2"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Alias             "/>
+
+            <EditText
+                android:id="@+id/txt_Alias"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearCedula"
+            android:layout_alignTop="@+id/linearAlias"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Cedula         "/>
+
+            <EditText
+                android:id="@+id/txt_Cedula"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearCuenta"
+            android:layout_alignTop="@+id/linearCedula"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="CuentaBancaria"/>
+
+            <EditText
+                android:id="@+id/txt_CuentaBancaria"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="28dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignTop="@+id/linearCuenta"
+            android:layout_marginTop="100dp">
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+                <Button
+                    android:id="@+id/Registrarse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Registrarse"
+                    android:textColor="#ffffff"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

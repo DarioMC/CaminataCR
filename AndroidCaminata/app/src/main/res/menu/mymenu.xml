@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.bases.caminatacr.MainActivity">
+    <item
+        android:id="@+id/Acceder"
+        android:orderInCategory="100"
+        android:title="Acceder"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/Registrarse"
+        android:orderInCategory="100"
+        android:title="Registrarse"
+        app:showAsAction="never"
+        />
+</menu>
