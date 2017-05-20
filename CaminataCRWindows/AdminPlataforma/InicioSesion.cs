@@ -17,11 +17,12 @@ namespace AdminPlataforma
         public InicioSesion()
         {
             InitializeComponent();
+            initFont();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            initFont();
+            
         }
 
         private void initFont()

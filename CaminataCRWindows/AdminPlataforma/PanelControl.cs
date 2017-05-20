@@ -17,31 +17,6 @@ namespace AdminPlataforma
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             tabControlPaginas.SelectTab(2);
@@ -80,6 +55,28 @@ namespace AdminPlataforma
         private void buttonTab6_Click(object sender, EventArgs e)
         {
             tabControlPaginas.SelectTab(6);
+        }
+
+        private void buttonCargaDatos_Click(object sender, EventArgs e)
+        {
+
+            ListViewItem linea = new ListViewItem("Emmanuel Perez");
+            linea.SubItems.Add("H4Xor");
+            listViewUsuariosAdministradores.Items.Add(linea);
+            /*
+            foreach (PlatilloCuenta platilloCuenta in FrVerMenuOrdenar.cuenta)
+            {
+                ListViewItem linea = new ListViewItem(platilloCuenta.platoNombre);
+                linea.SubItems.Add(platilloCuenta.usuario);
+                linea.SubItems.Add(platilloCuenta.precio.ToString());
+                listViewReporteCliente.Items.Add(linea);
+            }
+            */
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
