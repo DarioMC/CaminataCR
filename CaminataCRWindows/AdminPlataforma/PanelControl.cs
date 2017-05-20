@@ -44,7 +44,7 @@ namespace AdminPlataforma
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabControlPaginas.SelectTab(3);
+            tabControlPaginas.SelectTab(2);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,12 +54,32 @@ namespace AdminPlataforma
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            tabControlPaginas.SelectTab(1);
+            tabControlPaginas.SelectTab(0);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            tabControlPaginas.SelectTab(2);
+            tabControlPaginas.SelectTab(1);
+        }
+
+        private void buttonTab3_Click(object sender, EventArgs e)
+        {
+            tabControlPaginas.SelectTab(3);
+        }
+
+        private void buttonTab4_Click(object sender, EventArgs e)
+        {
+            tabControlPaginas.SelectTab(4);
+        }
+
+        private void buttonTab5_Click(object sender, EventArgs e)
+        {
+            tabControlPaginas.SelectTab(5);
+        }
+
+        private void buttonTab6_Click(object sender, EventArgs e)
+        {
+            tabControlPaginas.SelectTab(6);
         }
     }
 }

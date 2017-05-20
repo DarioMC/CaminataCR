@@ -70,7 +70,7 @@
             // buttonInicioSesion
             // 
             this.buttonInicioSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.buttonInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInicioSesion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInicioSesion.Location = new System.Drawing.Point(77, 204);
