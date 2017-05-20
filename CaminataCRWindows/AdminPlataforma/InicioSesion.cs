@@ -21,5 +21,27 @@ namespace AdminPlataforma
         {
 
         }
+
+        private void textBoxContrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonInicioSesion_Click(object sender, EventArgs e)
+        {
+            //if (a == 1)
+            //{
+                //usuario = this.textBoxUsuario.Text;
+                //MessageBox.Show("Exito", "Some title", MessageBoxButtons.OK, MessageBoxIcon.None);
+                this.Hide();
+                PanelControl window = new PanelControl();
+                window.ShowDialog();
+                this.Close();
+            //}
+            //else if (a == 0)
+            //{
+               // MessageBox.Show("No corresponde a ningun usuario o contrasena", "Some title", MessageBoxButtons.OK, MessageBoxIcon.Error);
+           // }
+        }
     }
 }
