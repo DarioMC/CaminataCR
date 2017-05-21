@@ -37,6 +37,64 @@ namespace ConexionSQL
             return singletonInstance;
         }
 
+        private void abrirConexionSP(string tiraSP)
+        {
+            // abrir la conexion al servidor
+            conexion.Open();
+
+            // tira con el nombre del procedimiento
+            comandosql = new SqlCommand(tiraSP, conexion);
+            comandosql.CommandType = CommandType.StoredProcedure;
+        }
+
+        private void terminaConexionSO()
+        {
+            // cerrar el reader
+            if (lectorsql != null)
+            {
+                lectorsql.Close();
+            }
+
+            // cerrar conexion
+            if (conexion != null)
+            {
+                conexion.Close();
+            }
+        }
+
+        public void procedimientoEjemplo2(string alias)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarAmigos");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    //Mesas mesa = new Mesas();
+                    //mesa.idMesa = int.Parse(sql.Lectorsql[0].ToString());
+
+                    // se puede castear los parametros con el nombre de la columna
+                    string columna = (string)lectorsql["columna"];
+
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        /*
         public void procedimientoEjemplo()
         {
             try
@@ -85,7 +143,9 @@ namespace ConexionSQL
                     conexion.Close();
                 }
             }
-
         }
+        */
+
+
     }
 }
