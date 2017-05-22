@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace AdminPlataforma
 {
@@ -57,6 +58,7 @@ namespace AdminPlataforma
 
         private void buttonInicioSesion_Click(object sender, EventArgs e)
         {
+            //usuarioExiste = 
             //if (a == 1)
             //{
                 //usuario = this.textBoxUsuario.Text;
@@ -70,6 +72,21 @@ namespace AdminPlataforma
             //{
                // MessageBox.Show("No corresponde a ningun usuario o contrasena", "Some title", MessageBoxButtons.OK, MessageBoxIcon.Error);
            // }
+        }
+
+        private void linkLabelRegistrarNuevoUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            UAAgregarAdmins window = new UAAgregarAdmins();
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonProbar_Click(object sender, EventArgs e)
+        {
+            ContrasenaEncriptada contrasenaEncriptada;
+            contrasenaEncriptada = new ContrasenaEncriptada("123");//ContrasenaEncriptada contrasena = new Cons
+            MessageBox.Show(contrasenaEncriptada.getContrasenaEncriptadaTira());
         }
     }
 }

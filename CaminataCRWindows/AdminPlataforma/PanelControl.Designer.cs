@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("cosas");
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonTab6 = new System.Windows.Forms.Button();
@@ -46,30 +46,19 @@
             this.buttonTab5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControlPaginas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonCargaDatos = new System.Windows.Forms.Button();
-            this.listViewUsuariosAdministradores = new System.Windows.Forms.ListView();
-            this.columnHeaderNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
             this.buttonAgregarAdmins = new System.Windows.Forms.Button();
             this.buttonEditarAdmins = new System.Windows.Forms.Button();
             this.buttonEliminarAdmins = new System.Windows.Forms.Button();
             this.buttonDesactivarAdmins = new System.Windows.Forms.Button();
+            this.listViewUsuariosAdministradores = new System.Windows.Forms.ListView();
+            this.columnHeaderNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -80,12 +69,15 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.button10 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
@@ -96,6 +88,8 @@
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.button12 = new System.Windows.Forms.Button();
@@ -106,6 +100,8 @@
             this.listView4 = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.button17 = new System.Windows.Forms.Button();
@@ -116,6 +112,8 @@
             this.listView5 = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.button22 = new System.Windows.Forms.Button();
@@ -126,6 +124,10 @@
             this.listView6 = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelCloseButton = new System.Windows.Forms.Label();
+            this.labelMinimiza = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -134,23 +136,24 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel4
@@ -162,8 +165,8 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tabControlPaginas, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -347,19 +350,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Administracion de plataforma";
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(201, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(651, 67);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
             // tabControlPaginas
             // 
             this.tabControlPaginas.Controls.Add(this.tabPage1);
@@ -370,7 +360,8 @@
             this.tabControlPaginas.Controls.Add(this.tabPage6);
             this.tabControlPaginas.Controls.Add(this.tabPage7);
             this.tabControlPaginas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPaginas.ItemSize = new System.Drawing.Size(40, 40);
+            this.tabControlPaginas.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.tabControlPaginas.ItemSize = new System.Drawing.Size(0, 1);
             this.tabControlPaginas.Location = new System.Drawing.Point(201, 68);
             this.tabControlPaginas.Margin = new System.Windows.Forms.Padding(0);
             this.tabControlPaginas.Name = "tabControlPaginas";
@@ -384,10 +375,10 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.tabPage1.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Location = new System.Drawing.Point(4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 425);
+            this.tabPage1.Size = new System.Drawing.Size(643, 464);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -402,7 +393,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(629, 411);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(631, 419);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -421,11 +412,11 @@
             this.tableLayoutPanel6.Controls.Add(this.buttonEditarAdmins, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.buttonEliminarAdmins, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.buttonDesactivarAdmins, 4, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 338);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 344);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(623, 70);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(625, 72);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // buttonCargaDatos
@@ -435,7 +426,7 @@
             this.buttonCargaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatos.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatos.Location = new System.Drawing.Point(0, 7);
+            this.buttonCargaDatos.Location = new System.Drawing.Point(0, 8);
             this.buttonCargaDatos.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatos.Name = "buttonCargaDatos";
             this.buttonCargaDatos.Size = new System.Drawing.Size(124, 55);
@@ -444,6 +435,74 @@
             this.buttonCargaDatos.UseCompatibleTextRendering = true;
             this.buttonCargaDatos.UseVisualStyleBackColor = false;
             this.buttonCargaDatos.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            // 
+            // buttonAgregarAdmins
+            // 
+            this.buttonAgregarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAgregarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonAgregarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonAgregarAdmins.Location = new System.Drawing.Point(125, 8);
+            this.buttonAgregarAdmins.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAgregarAdmins.Name = "buttonAgregarAdmins";
+            this.buttonAgregarAdmins.Size = new System.Drawing.Size(124, 55);
+            this.buttonAgregarAdmins.TabIndex = 2;
+            this.buttonAgregarAdmins.Text = "Agregar";
+            this.buttonAgregarAdmins.UseCompatibleTextRendering = true;
+            this.buttonAgregarAdmins.UseVisualStyleBackColor = false;
+            this.buttonAgregarAdmins.Click += new System.EventHandler(this.buttonAgregarAdmins_Click);
+            // 
+            // buttonEditarAdmins
+            // 
+            this.buttonEditarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonEditarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonEditarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonEditarAdmins.Location = new System.Drawing.Point(250, 8);
+            this.buttonEditarAdmins.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEditarAdmins.Name = "buttonEditarAdmins";
+            this.buttonEditarAdmins.Size = new System.Drawing.Size(124, 55);
+            this.buttonEditarAdmins.TabIndex = 2;
+            this.buttonEditarAdmins.Text = "Editar";
+            this.buttonEditarAdmins.UseCompatibleTextRendering = true;
+            this.buttonEditarAdmins.UseVisualStyleBackColor = false;
+            this.buttonEditarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            // 
+            // buttonEliminarAdmins
+            // 
+            this.buttonEliminarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonEliminarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonEliminarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonEliminarAdmins.Location = new System.Drawing.Point(375, 8);
+            this.buttonEliminarAdmins.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEliminarAdmins.Name = "buttonEliminarAdmins";
+            this.buttonEliminarAdmins.Size = new System.Drawing.Size(124, 55);
+            this.buttonEliminarAdmins.TabIndex = 2;
+            this.buttonEliminarAdmins.Text = "Eliminar";
+            this.buttonEliminarAdmins.UseCompatibleTextRendering = true;
+            this.buttonEliminarAdmins.UseVisualStyleBackColor = false;
+            this.buttonEliminarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            // 
+            // buttonDesactivarAdmins
+            // 
+            this.buttonDesactivarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDesactivarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonDesactivarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDesactivarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDesactivarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonDesactivarAdmins.Location = new System.Drawing.Point(500, 8);
+            this.buttonDesactivarAdmins.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDesactivarAdmins.Name = "buttonDesactivarAdmins";
+            this.buttonDesactivarAdmins.Size = new System.Drawing.Size(124, 55);
+            this.buttonDesactivarAdmins.TabIndex = 2;
+            this.buttonDesactivarAdmins.Text = "Desactivar";
+            this.buttonDesactivarAdmins.UseCompatibleTextRendering = true;
+            this.buttonDesactivarAdmins.UseVisualStyleBackColor = false;
+            this.buttonDesactivarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
             // 
             // listViewUsuariosAdministradores
             // 
@@ -458,10 +517,10 @@
             this.listViewUsuariosAdministradores.FullRowSelect = true;
             this.listViewUsuariosAdministradores.GridLines = true;
             this.listViewUsuariosAdministradores.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem8});
             this.listViewUsuariosAdministradores.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosAdministradores.Name = "listViewUsuariosAdministradores";
-            this.listViewUsuariosAdministradores.Size = new System.Drawing.Size(623, 329);
+            this.listViewUsuariosAdministradores.Size = new System.Drawing.Size(625, 335);
             this.listViewUsuariosAdministradores.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listViewUsuariosAdministradores.TabIndex = 1;
             this.listViewUsuariosAdministradores.UseCompatibleStateImageBehavior = false;
@@ -481,190 +540,12 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.tabPage2.Controls.Add(this.tableLayoutPanel7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Location = new System.Drawing.Point(4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 425);
+            this.tabPage2.Size = new System.Drawing.Size(643, 464);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.tableLayoutPanel9);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 44);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(643, 425);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(272, 212);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "tab numero 3";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.tableLayoutPanel11);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 44);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(643, 425);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(275, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "tab numero 4";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.tableLayoutPanel13);
-            this.tabPage5.Controls.Add(this.label5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 44);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(643, 425);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(275, 205);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "tab numero 5";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.tableLayoutPanel15);
-            this.tabPage6.Controls.Add(this.label6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 44);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(643, 425);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(275, 205);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "tab numero 6";
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.tableLayoutPanel17);
-            this.tabPage7.Controls.Add(this.label7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 44);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(643, 425);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "tabPage7";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(275, 205);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "tab numero 7";
-            // 
-            // buttonAgregarAdmins
-            // 
-            this.buttonAgregarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonAgregarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.buttonAgregarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAgregarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregarAdmins.Location = new System.Drawing.Point(124, 7);
-            this.buttonAgregarAdmins.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonAgregarAdmins.Name = "buttonAgregarAdmins";
-            this.buttonAgregarAdmins.Size = new System.Drawing.Size(124, 55);
-            this.buttonAgregarAdmins.TabIndex = 2;
-            this.buttonAgregarAdmins.Text = "Agregar";
-            this.buttonAgregarAdmins.UseCompatibleTextRendering = true;
-            this.buttonAgregarAdmins.UseVisualStyleBackColor = false;
-            this.buttonAgregarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
-            // 
-            // buttonEditarAdmins
-            // 
-            this.buttonEditarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEditarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.buttonEditarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEditarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarAdmins.Location = new System.Drawing.Point(248, 7);
-            this.buttonEditarAdmins.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEditarAdmins.Name = "buttonEditarAdmins";
-            this.buttonEditarAdmins.Size = new System.Drawing.Size(124, 55);
-            this.buttonEditarAdmins.TabIndex = 2;
-            this.buttonEditarAdmins.Text = "Editar";
-            this.buttonEditarAdmins.UseCompatibleTextRendering = true;
-            this.buttonEditarAdmins.UseVisualStyleBackColor = false;
-            this.buttonEditarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
-            // 
-            // buttonEliminarAdmins
-            // 
-            this.buttonEliminarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEliminarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.buttonEliminarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEliminarAdmins.Location = new System.Drawing.Point(372, 7);
-            this.buttonEliminarAdmins.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEliminarAdmins.Name = "buttonEliminarAdmins";
-            this.buttonEliminarAdmins.Size = new System.Drawing.Size(124, 55);
-            this.buttonEliminarAdmins.TabIndex = 2;
-            this.buttonEliminarAdmins.Text = "Eliminar";
-            this.buttonEliminarAdmins.UseCompatibleTextRendering = true;
-            this.buttonEliminarAdmins.UseVisualStyleBackColor = false;
-            this.buttonEliminarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
-            // 
-            // buttonDesactivarAdmins
-            // 
-            this.buttonDesactivarAdmins.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonDesactivarAdmins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.buttonDesactivarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDesactivarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDesactivarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonDesactivarAdmins.Location = new System.Drawing.Point(497, 7);
-            this.buttonDesactivarAdmins.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonDesactivarAdmins.Name = "buttonDesactivarAdmins";
-            this.buttonDesactivarAdmins.Size = new System.Drawing.Size(124, 55);
-            this.buttonDesactivarAdmins.TabIndex = 2;
-            this.buttonDesactivarAdmins.Text = "Desactivar";
-            this.buttonDesactivarAdmins.UseCompatibleTextRendering = true;
-            this.buttonDesactivarAdmins.UseVisualStyleBackColor = false;
-            this.buttonDesactivarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -796,7 +677,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(623, 329);
@@ -814,6 +695,17 @@
             // 
             this.columnHeader2.Text = "Usuario";
             this.columnHeader2.Width = 191;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.tableLayoutPanel9);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 5);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(643, 464);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel9
             // 
@@ -877,7 +769,7 @@
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
             this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem10});
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(623, 329);
@@ -895,6 +787,29 @@
             // 
             this.columnHeader4.Text = "Usuario";
             this.columnHeader4.Width = 191;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(272, 212);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "tab numero 3";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.tableLayoutPanel11);
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 5);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(643, 464);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // tableLayoutPanel11
             // 
@@ -1026,7 +941,7 @@
             this.listView3.FullRowSelect = true;
             this.listView3.GridLines = true;
             this.listView3.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem11});
             this.listView3.Location = new System.Drawing.Point(3, 3);
             this.listView3.Name = "listView3";
             this.listView3.Size = new System.Drawing.Size(623, 329);
@@ -1044,6 +959,28 @@
             // 
             this.columnHeader6.Text = "Usuario";
             this.columnHeader6.Width = 191;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(275, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "tab numero 4";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.tableLayoutPanel13);
+            this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 5);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(643, 464);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel13
             // 
@@ -1175,7 +1112,7 @@
             this.listView4.FullRowSelect = true;
             this.listView4.GridLines = true;
             this.listView4.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem12});
             this.listView4.Location = new System.Drawing.Point(3, 3);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(623, 329);
@@ -1193,6 +1130,28 @@
             // 
             this.columnHeader8.Text = "Usuario";
             this.columnHeader8.Width = 191;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(275, 205);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "tab numero 5";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.tableLayoutPanel15);
+            this.tabPage6.Controls.Add(this.label6);
+            this.tabPage6.Location = new System.Drawing.Point(4, 5);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(643, 464);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel15
             // 
@@ -1324,7 +1283,7 @@
             this.listView5.FullRowSelect = true;
             this.listView5.GridLines = true;
             this.listView5.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
+            listViewItem13});
             this.listView5.Location = new System.Drawing.Point(3, 3);
             this.listView5.Name = "listView5";
             this.listView5.Size = new System.Drawing.Size(623, 329);
@@ -1342,6 +1301,28 @@
             // 
             this.columnHeader10.Text = "Usuario";
             this.columnHeader10.Width = 191;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(275, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "tab numero 6";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.tableLayoutPanel17);
+            this.tabPage7.Controls.Add(this.label7);
+            this.tabPage7.Location = new System.Drawing.Point(4, 5);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(643, 464);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel17
             // 
@@ -1473,7 +1454,7 @@
             this.listView6.FullRowSelect = true;
             this.listView6.GridLines = true;
             this.listView6.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7});
+            listViewItem14});
             this.listView6.Location = new System.Drawing.Point(3, 3);
             this.listView6.Name = "listView6";
             this.listView6.Size = new System.Drawing.Size(623, 329);
@@ -1492,14 +1473,73 @@
             this.columnHeader12.Text = "Usuario";
             this.columnHeader12.Width = 191;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(275, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "tab numero 7";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.34609F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.65391F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.labelCloseButton, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelMinimiza, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(201, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.05882F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.94118F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(651, 68);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // labelCloseButton
+            // 
+            this.labelCloseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelCloseButton.AutoSize = true;
+            this.labelCloseButton.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCloseButton.Location = new System.Drawing.Point(616, 5);
+            this.labelCloseButton.Name = "labelCloseButton";
+            this.labelCloseButton.Size = new System.Drawing.Size(19, 20);
+            this.labelCloseButton.TabIndex = 0;
+            this.labelCloseButton.Text = "X";
+            this.labelCloseButton.Click += new System.EventHandler(this.labelCloseButton_Click_1);
+            this.labelCloseButton.MouseEnter += new System.EventHandler(this.labelCloseButton_MouseEnter);
+            this.labelCloseButton.MouseLeave += new System.EventHandler(this.labelCloseButton_MouseLeave);
+            // 
+            // labelMinimiza
+            // 
+            this.labelMinimiza.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelMinimiza.AutoSize = true;
+            this.labelMinimiza.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMinimiza.Location = new System.Drawing.Point(569, 5);
+            this.labelMinimiza.Name = "labelMinimiza";
+            this.labelMinimiza.Size = new System.Drawing.Size(17, 20);
+            this.labelMinimiza.TabIndex = 1;
+            this.labelMinimiza.Text = "_";
+            this.labelMinimiza.Click += new System.EventHandler(this.labelMinimiza_Click);
+            this.labelMinimiza.MouseEnter += new System.EventHandler(this.labelMinimiza_MouseEnter);
+            this.labelMinimiza.MouseLeave += new System.EventHandler(this.labelMinimiza_MouseLeave);
+            // 
             // PanelControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
             this.ClientSize = new System.Drawing.Size(852, 541);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "PanelControl";
             this.Text = "PanelControl";
+            this.Load += new System.EventHandler(this.PanelControl_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1509,28 +1549,30 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1539,7 +1581,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TabControl tabControlPaginas;
         private System.Windows.Forms.TabPage tabPage1;
@@ -1628,5 +1669,8 @@
         private System.Windows.Forms.ListView listView6;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label labelCloseButton;
+        private System.Windows.Forms.Label labelMinimiza;
     }
 }
