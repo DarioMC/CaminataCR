@@ -68,6 +68,12 @@
     <Compile Include="UAAgregarAdmins.Designer.cs">
       <DependentUpon>UAAgregarAdmins.cs</DependentUpon>
     </Compile>
+    <Compile Include="UICTAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UICTAgregarUsuario.Designer.cs">
+      <DependentUpon>UICTAgregarUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="UAAgregarAdmins.resx">
       <DependentUpon>UAAgregarAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UICTAgregarUsuario.resx">
+      <DependentUpon>UICTAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -107,6 +116,10 @@
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
       <Project>{a3061f78-c94c-40e4-9a84-219ae1c8a6de}</Project>
       <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\EntityObjects.csproj">
+      <Project>{66b5aac5-f120-496e-9ff2-1c4471d45100}</Project>
+      <Name>EntityObjects</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

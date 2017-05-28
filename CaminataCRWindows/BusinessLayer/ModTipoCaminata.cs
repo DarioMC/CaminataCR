@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class Administrador : Persona
+    public class ModTipoCaminata
     {
-
-        public static void agregarAdministrador()
-        {
-
-        }
     }
 }

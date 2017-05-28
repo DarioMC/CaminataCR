@@ -1,4 +1,4 @@
-﻿select * from Persona P inner join Administrador A on A.IdAdministrador = P.IdPersona
+﻿/*select * from Persona P inner join Administrador A on A.IdAdministrador = P.IdPersona
 select Alias, P.PrimerNombre, P.PrimerApellido, P.SegundoApellido, FechaNac, Cedula, IdPersona  from Persona P inner join Administrador A on A.IdAdministrador = P.IdPersona
 /*
 exec SPS_AgregarAdministrador
@@ -22,3 +22,7 @@ print @cosa
 */
 
 select * from NivelDificultad
+*/
+
+EXEC SPS_BorrarAdministrador
+@alias = 'Gogeta'

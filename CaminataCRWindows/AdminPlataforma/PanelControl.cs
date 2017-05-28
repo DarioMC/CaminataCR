@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using EntityObjects;
 
 namespace AdminPlataforma
 {
@@ -60,10 +61,15 @@ namespace AdminPlataforma
 
         private void buttonCargaDatos_Click(object sender, EventArgs e)
         {
-
-            ListViewItem linea = new ListViewItem("Emmanuel Perez");
-            linea.SubItems.Add("H4Xor");
-            listViewUsuariosAdministradores.Items.Add(linea);
+           listViewUsuariosAdministradores.Items.Clear();
+           // carga los admins otra vez (por si hay cambios)
+           SesionActual.getInstance().modUsuariosAdministrador.cargarAdministradores();
+            foreach (Administrador admin in SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores)
+            {
+                ListViewItem linea = new ListViewItem(admin.primerNombre);
+                linea.SubItems.Add(admin.alias);
+                listViewUsuariosAdministradores.Items.Add(linea);
+            }
             /*
             foreach (PlatilloCuenta platilloCuenta in FrVerMenuOrdenar.cuenta)
             {
@@ -128,6 +134,93 @@ namespace AdminPlataforma
 
         private void buttonAgregarAdmins_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            UAAgregarAdmins window = new UAAgregarAdmins();
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEditarAdmins_Click(object sender, EventArgs e)
+        {
+
+            int indexAdminListView = listViewUsuariosAdministradores.SelectedIndices[0];
+            MessageBox.Show("Index: " + indexAdminListView.ToString());
+
+            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[indexAdminListView];
+            SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(indexAdminListView);
+            SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
+            MessageBox.Show("Usuario: " + admin.alias);
+
+
+            this.Hide();
+            UAAgregarAdmins window = new UAAgregarAdmins(admin);
+            window.ShowDialog();
+            this.Show();
+
+
+
+            /*
+                Restaurante restaurante = restauranteListas[restauranteIndexDetalles];
+                labelTipo.Text = restaurante.Tipo;
+                FrAdminRest.restauranteActualID = restaurante.IdRestaurante;
+                //int temp = restaurante.IdRestaurante;
+                MemoryStream mem = new MemoryStream(restaurante.Foto);      // carga la imagen restaurante.foto es un byte[]
+                pictureBox1.Image = Image.FromStream(mem);
+                */
+        }
+
+        private void buttonEliminarAdmins_Click(object sender, EventArgs e)
+        {
+            int indexAdminListView = listViewUsuariosAdministradores.SelectedIndices[0];
+
+            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[indexAdminListView];
+            SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(indexAdminListView);
+            SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
+
+            MessageBox.Show("Index: " + indexAdminListView.ToString() + " Usuario: " + admin.alias);
+        }
+
+        private void buttonCargaDatosUICT_Click(object sender, EventArgs e)
+        {
+            listViewUsuariosICT.Items.Clear();
+            foreach (UsuarioICT usuario in SesionActual.getInstance().modUsuariosICT.listaUsuarios)
+            {
+                ListViewItem linea = new ListViewItem(usuario.alias);
+                linea.SubItems.Add(usuario.primerNombre);
+                listViewUsuariosICT.Items.Add(linea);
+            }
+        }
+
+        private void buttonAgregarUsuariosICT_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UICTAgregarUsuario window = new UICTAgregarUsuario();
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonDesactivarAdmins_Click(object sender, EventArgs e)
+        {
+            // esta lineas asocian el administrador en memoria con el listview
+            int indexAdminListView = listViewUsuariosAdministradores.SelectedIndices[0];
+            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[indexAdminListView];
+
+
+        }
+
+        private void buttonEliminarUsuariosICT_Click(object sender, EventArgs e)
+        {
+            int index = listViewUsuariosICT.SelectedIndices[0];
+
+            UsuarioICT usuario = SesionActual.getInstance().modUsuariosICT.listaUsuarios[index];
+            SesionActual.getInstance().modUsuariosICT.listaUsuarios.RemoveAt(index);
+            SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
         }
     }
+    
 }

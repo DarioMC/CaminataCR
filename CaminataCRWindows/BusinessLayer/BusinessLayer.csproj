@@ -40,17 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador.cs" />
     <Compile Include="ContrasenaEncriptada.cs" />
-    <Compile Include="Hiker.cs" />
-    <Compile Include="Persona.cs" />
-    <Compile Include="Procedimientos.cs" />
+    <Compile Include="ModNivCalidad.cs" />
+    <Compile Include="ModNivDificultad.cs" />
+    <Compile Include="ModNivPrecio.cs" />
+    <Compile Include="ModTipoCaminata.cs" />
+    <Compile Include="ModUsuariosAdministrador.cs" />
+    <Compile Include="ModUsuariosICT.cs" />
+    <Compile Include="ModUsuariosRegulares.cs" />
+    <Compile Include="SesionActual.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConexionSQL\ConexionSQL.csproj">
       <Project>{a92f0811-afbf-491c-9bd7-8844e907b701}</Project>
       <Name>ConexionSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\EntityObjects.csproj">
+      <Project>{66b5aac5-f120-496e-9ff2-1c4471d45100}</Project>
+      <Name>EntityObjects</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

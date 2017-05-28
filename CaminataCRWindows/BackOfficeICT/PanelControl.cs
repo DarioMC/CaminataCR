@@ -36,5 +36,10 @@ namespace BackOfficeICT
         {
             tabControlPaginas.SelectTab(3);
         }
+
+        private void buttonAgregarAdmins_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

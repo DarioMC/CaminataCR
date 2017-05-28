@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class Hiker : Persona
+    public class ModNivPrecio
     {
-        string cuentaBancaria;
-        bool habilitado;
     }
 }

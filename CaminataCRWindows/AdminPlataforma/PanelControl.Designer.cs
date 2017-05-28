@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cosas");
             System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cosas");
             System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("cosas");
             System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("cosas");
             System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("cosas");
@@ -50,7 +50,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCargaDatos = new System.Windows.Forms.Button();
+            this.buttonCargaDatosUA = new System.Windows.Forms.Button();
             this.buttonAgregarAdmins = new System.Windows.Forms.Button();
             this.buttonEditarAdmins = new System.Windows.Forms.Button();
             this.buttonEliminarAdmins = new System.Windows.Forms.Button();
@@ -61,12 +61,12 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCargaDatosUICT = new System.Windows.Forms.Button();
+            this.buttonAgregarUsuariosICT = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonEliminarUsuariosICT = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewUsuariosICT = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -361,7 +361,7 @@
             this.tabControlPaginas.Controls.Add(this.tabPage7);
             this.tabControlPaginas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPaginas.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.tabControlPaginas.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabControlPaginas.ItemSize = new System.Drawing.Size(20, 20);
             this.tabControlPaginas.Location = new System.Drawing.Point(201, 68);
             this.tabControlPaginas.Margin = new System.Windows.Forms.Padding(0);
             this.tabControlPaginas.Name = "tabControlPaginas";
@@ -375,12 +375,13 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.tabPage1.Controls.Add(this.tableLayoutPanel5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 464);
+            this.tabPage1.Size = new System.Drawing.Size(643, 445);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -388,12 +389,13 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.listViewUsuariosAdministradores, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(631, 419);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(637, 439);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -407,34 +409,34 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.buttonCargaDatos, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.buttonCargaDatosUA, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.buttonAgregarAdmins, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.buttonEditarAdmins, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.buttonEliminarAdmins, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.buttonDesactivarAdmins, 4, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 344);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 360);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(625, 72);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(631, 76);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
-            // buttonCargaDatos
+            // buttonCargaDatosUA
             // 
-            this.buttonCargaDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCargaDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.buttonCargaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCargaDatos.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCargaDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatos.Location = new System.Drawing.Point(0, 8);
-            this.buttonCargaDatos.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonCargaDatos.Name = "buttonCargaDatos";
-            this.buttonCargaDatos.Size = new System.Drawing.Size(124, 55);
-            this.buttonCargaDatos.TabIndex = 2;
-            this.buttonCargaDatos.Text = "Carga Datos";
-            this.buttonCargaDatos.UseCompatibleTextRendering = true;
-            this.buttonCargaDatos.UseVisualStyleBackColor = false;
-            this.buttonCargaDatos.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            this.buttonCargaDatosUA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCargaDatosUA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonCargaDatosUA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCargaDatosUA.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCargaDatosUA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonCargaDatosUA.Location = new System.Drawing.Point(1, 10);
+            this.buttonCargaDatosUA.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonCargaDatosUA.Name = "buttonCargaDatosUA";
+            this.buttonCargaDatosUA.Size = new System.Drawing.Size(124, 55);
+            this.buttonCargaDatosUA.TabIndex = 2;
+            this.buttonCargaDatosUA.Text = "Carga Datos";
+            this.buttonCargaDatosUA.UseCompatibleTextRendering = true;
+            this.buttonCargaDatosUA.UseVisualStyleBackColor = false;
+            this.buttonCargaDatosUA.Click += new System.EventHandler(this.buttonCargaDatos_Click);
             // 
             // buttonAgregarAdmins
             // 
@@ -443,7 +445,7 @@
             this.buttonAgregarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregarAdmins.Location = new System.Drawing.Point(125, 8);
+            this.buttonAgregarAdmins.Location = new System.Drawing.Point(127, 10);
             this.buttonAgregarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAgregarAdmins.Name = "buttonAgregarAdmins";
             this.buttonAgregarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -460,7 +462,7 @@
             this.buttonEditarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarAdmins.Location = new System.Drawing.Point(250, 8);
+            this.buttonEditarAdmins.Location = new System.Drawing.Point(253, 10);
             this.buttonEditarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditarAdmins.Name = "buttonEditarAdmins";
             this.buttonEditarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -468,7 +470,7 @@
             this.buttonEditarAdmins.Text = "Editar";
             this.buttonEditarAdmins.UseCompatibleTextRendering = true;
             this.buttonEditarAdmins.UseVisualStyleBackColor = false;
-            this.buttonEditarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            this.buttonEditarAdmins.Click += new System.EventHandler(this.buttonEditarAdmins_Click);
             // 
             // buttonEliminarAdmins
             // 
@@ -477,7 +479,7 @@
             this.buttonEliminarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEliminarAdmins.Location = new System.Drawing.Point(375, 8);
+            this.buttonEliminarAdmins.Location = new System.Drawing.Point(379, 10);
             this.buttonEliminarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEliminarAdmins.Name = "buttonEliminarAdmins";
             this.buttonEliminarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -485,7 +487,7 @@
             this.buttonEliminarAdmins.Text = "Eliminar";
             this.buttonEliminarAdmins.UseCompatibleTextRendering = true;
             this.buttonEliminarAdmins.UseVisualStyleBackColor = false;
-            this.buttonEliminarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            this.buttonEliminarAdmins.Click += new System.EventHandler(this.buttonEliminarAdmins_Click);
             // 
             // buttonDesactivarAdmins
             // 
@@ -494,7 +496,7 @@
             this.buttonDesactivarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDesactivarAdmins.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDesactivarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonDesactivarAdmins.Location = new System.Drawing.Point(500, 8);
+            this.buttonDesactivarAdmins.Location = new System.Drawing.Point(505, 10);
             this.buttonDesactivarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDesactivarAdmins.Name = "buttonDesactivarAdmins";
             this.buttonDesactivarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -502,11 +504,11 @@
             this.buttonDesactivarAdmins.Text = "Desactivar";
             this.buttonDesactivarAdmins.UseCompatibleTextRendering = true;
             this.buttonDesactivarAdmins.UseVisualStyleBackColor = false;
-            this.buttonDesactivarAdmins.Click += new System.EventHandler(this.buttonCargaDatos_Click);
+            this.buttonDesactivarAdmins.Click += new System.EventHandler(this.buttonDesactivarAdmins_Click);
             // 
             // listViewUsuariosAdministradores
             // 
-            this.listViewUsuariosAdministradores.AllowColumnReorder = true;
+            this.listViewUsuariosAdministradores.AutoArrange = false;
             this.listViewUsuariosAdministradores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.listViewUsuariosAdministradores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewUsuariosAdministradores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -517,11 +519,11 @@
             this.listViewUsuariosAdministradores.FullRowSelect = true;
             this.listViewUsuariosAdministradores.GridLines = true;
             this.listViewUsuariosAdministradores.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem8});
+            listViewItem9});
             this.listViewUsuariosAdministradores.Location = new System.Drawing.Point(3, 3);
+            this.listViewUsuariosAdministradores.MultiSelect = false;
             this.listViewUsuariosAdministradores.Name = "listViewUsuariosAdministradores";
-            this.listViewUsuariosAdministradores.Size = new System.Drawing.Size(625, 335);
-            this.listViewUsuariosAdministradores.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.listViewUsuariosAdministradores.Size = new System.Drawing.Size(631, 351);
             this.listViewUsuariosAdministradores.TabIndex = 1;
             this.listViewUsuariosAdministradores.UseCompatibleStateImageBehavior = false;
             this.listViewUsuariosAdministradores.View = System.Windows.Forms.View.Details;
@@ -540,10 +542,10 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.tabPage2.Controls.Add(this.tableLayoutPanel7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 464);
+            this.tabPage2.Size = new System.Drawing.Size(643, 445);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -552,13 +554,14 @@
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.listView1, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel7.Controls.Add(this.listViewUsuariosICT, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(629, 411);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(637, 439);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -572,49 +575,51 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.buttonCargaDatosUICT, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.buttonAgregarUsuariosICT, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button4, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.buttonEliminarUsuariosICT, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 338);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 360);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(623, 70);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(631, 76);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
-            // button1
+            // buttonCargaDatosUICT
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button1.Location = new System.Drawing.Point(0, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 55);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Carga Datos";
-            this.button1.UseCompatibleTextRendering = true;
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonCargaDatosUICT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCargaDatosUICT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonCargaDatosUICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCargaDatosUICT.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCargaDatosUICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonCargaDatosUICT.Location = new System.Drawing.Point(1, 10);
+            this.buttonCargaDatosUICT.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonCargaDatosUICT.Name = "buttonCargaDatosUICT";
+            this.buttonCargaDatosUICT.Size = new System.Drawing.Size(124, 55);
+            this.buttonCargaDatosUICT.TabIndex = 2;
+            this.buttonCargaDatosUICT.Text = "Carga Datos";
+            this.buttonCargaDatosUICT.UseCompatibleTextRendering = true;
+            this.buttonCargaDatosUICT.UseVisualStyleBackColor = false;
+            this.buttonCargaDatosUICT.Click += new System.EventHandler(this.buttonCargaDatosUICT_Click);
             // 
-            // button2
+            // buttonAgregarUsuariosICT
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button2.Location = new System.Drawing.Point(124, 7);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 55);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Agregar";
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonAgregarUsuariosICT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAgregarUsuariosICT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonAgregarUsuariosICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarUsuariosICT.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarUsuariosICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonAgregarUsuariosICT.Location = new System.Drawing.Point(127, 10);
+            this.buttonAgregarUsuariosICT.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAgregarUsuariosICT.Name = "buttonAgregarUsuariosICT";
+            this.buttonAgregarUsuariosICT.Size = new System.Drawing.Size(124, 55);
+            this.buttonAgregarUsuariosICT.TabIndex = 2;
+            this.buttonAgregarUsuariosICT.Text = "Agregar";
+            this.buttonAgregarUsuariosICT.UseCompatibleTextRendering = true;
+            this.buttonAgregarUsuariosICT.UseVisualStyleBackColor = false;
+            this.buttonAgregarUsuariosICT.Click += new System.EventHandler(this.buttonAgregarUsuariosICT_Click);
             // 
             // button3
             // 
@@ -623,7 +628,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button3.Location = new System.Drawing.Point(248, 7);
+            this.button3.Location = new System.Drawing.Point(253, 10);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 55);
@@ -632,21 +637,22 @@
             this.button3.UseCompatibleTextRendering = true;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // buttonEliminarUsuariosICT
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button4.Location = new System.Drawing.Point(372, 7);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 55);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Eliminar";
-            this.button4.UseCompatibleTextRendering = true;
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonEliminarUsuariosICT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonEliminarUsuariosICT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonEliminarUsuariosICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarUsuariosICT.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarUsuariosICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonEliminarUsuariosICT.Location = new System.Drawing.Point(379, 10);
+            this.buttonEliminarUsuariosICT.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEliminarUsuariosICT.Name = "buttonEliminarUsuariosICT";
+            this.buttonEliminarUsuariosICT.Size = new System.Drawing.Size(124, 55);
+            this.buttonEliminarUsuariosICT.TabIndex = 2;
+            this.buttonEliminarUsuariosICT.Text = "Eliminar";
+            this.buttonEliminarUsuariosICT.UseCompatibleTextRendering = true;
+            this.buttonEliminarUsuariosICT.UseVisualStyleBackColor = false;
+            this.buttonEliminarUsuariosICT.Click += new System.EventHandler(this.buttonEliminarUsuariosICT_Click);
             // 
             // button5
             // 
@@ -655,7 +661,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button5.Location = new System.Drawing.Point(497, 7);
+            this.button5.Location = new System.Drawing.Point(505, 10);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 55);
@@ -664,27 +670,26 @@
             this.button5.UseCompatibleTextRendering = true;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // listView1
+            // listViewUsuariosICT
             // 
-            this.listView1.AllowColumnReorder = true;
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewUsuariosICT.AllowColumnReorder = true;
+            this.listViewUsuariosICT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.listViewUsuariosICT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewUsuariosICT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9});
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(623, 329);
-            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewUsuariosICT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewUsuariosICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.listViewUsuariosICT.FullRowSelect = true;
+            this.listViewUsuariosICT.GridLines = true;
+            this.listViewUsuariosICT.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem8});
+            this.listViewUsuariosICT.Location = new System.Drawing.Point(3, 3);
+            this.listViewUsuariosICT.Name = "listViewUsuariosICT";
+            this.listViewUsuariosICT.Size = new System.Drawing.Size(631, 351);
+            this.listViewUsuariosICT.TabIndex = 1;
+            this.listViewUsuariosICT.UseCompatibleStateImageBehavior = false;
+            this.listViewUsuariosICT.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -698,14 +703,14 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
             this.tabPage3.Controls.Add(this.tableLayoutPanel9);
             this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(643, 464);
+            this.tabPage3.Size = new System.Drawing.Size(643, 445);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel9
             // 
@@ -713,12 +718,13 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.listView2, 0, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(629, 411);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(643, 445);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // tableLayoutPanel10
@@ -732,12 +738,12 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.button10, 1, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 338);
+            this.tableLayoutPanel10.Controls.Add(this.button10, 4, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 365);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(623, 70);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(637, 77);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // button10
@@ -747,7 +753,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button10.Location = new System.Drawing.Point(124, 7);
+            this.button10.Location = new System.Drawing.Point(510, 11);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(124, 55);
@@ -772,7 +778,7 @@
             listViewItem10});
             this.listView2.Location = new System.Drawing.Point(3, 3);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(623, 329);
+            this.listView2.Size = new System.Drawing.Size(637, 356);
             this.listView2.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
@@ -802,10 +808,10 @@
             // 
             this.tabPage4.Controls.Add(this.tableLayoutPanel11);
             this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 5);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(643, 464);
+            this.tabPage4.Size = new System.Drawing.Size(643, 445);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -974,10 +980,10 @@
             // 
             this.tabPage5.Controls.Add(this.tableLayoutPanel13);
             this.tabPage5.Controls.Add(this.label5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(643, 464);
+            this.tabPage5.Size = new System.Drawing.Size(643, 445);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1145,10 +1151,10 @@
             // 
             this.tabPage6.Controls.Add(this.tableLayoutPanel15);
             this.tabPage6.Controls.Add(this.label6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 5);
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(643, 464);
+            this.tabPage6.Size = new System.Drawing.Size(643, 445);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1316,10 +1322,10 @@
             // 
             this.tabPage7.Controls.Add(this.tableLayoutPanel17);
             this.tabPage7.Controls.Add(this.label7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 5);
+            this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(643, 464);
+            this.tabPage7.Size = new System.Drawing.Size(643, 445);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1605,7 +1611,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button buttonCargaDatos;
+        private System.Windows.Forms.Button buttonCargaDatosUA;
         private System.Windows.Forms.ListView listViewUsuariosAdministradores;
         private System.Windows.Forms.ColumnHeader columnHeaderNombre;
         private System.Windows.Forms.ColumnHeader columnHeaderUsuario;
@@ -1615,12 +1621,12 @@
         private System.Windows.Forms.Button buttonDesactivarAdmins;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCargaDatosUICT;
+        private System.Windows.Forms.Button buttonAgregarUsuariosICT;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonEliminarUsuariosICT;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewUsuariosICT;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;

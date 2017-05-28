@@ -58,20 +58,19 @@ namespace AdminPlataforma
 
         private void buttonInicioSesion_Click(object sender, EventArgs e)
         {
-            //usuarioExiste = 
-            //if (a == 1)
-            //{
-                //usuario = this.textBoxUsuario.Text;
-                //MessageBox.Show("Exito", "Some title", MessageBoxButtons.OK, MessageBoxIcon.None);
+            try
+            {
+                SesionActual.getInstance().iniciarSesion(this.textBoxUsuario.Text, this.textBoxContrasena.Text);
                 this.Hide();
                 PanelControl window = new PanelControl();
                 window.ShowDialog();
                 this.Close();
-            //}
-            //else if (a == 0)
-            //{
-               // MessageBox.Show("No corresponde a ningun usuario o contrasena", "Some title", MessageBoxButtons.OK, MessageBoxIcon.Error);
-           // }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
         }
 
         private void linkLabelRegistrarNuevoUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using EntityObjects;
 
 namespace ConexionSQL
 {
@@ -15,7 +16,7 @@ namespace ConexionSQL
         // crear un singleton
         private static conexionSQL singletonInstance = null;
 
-        private static SqlConnection conexion = new SqlConnection("Server=186.15.160.14,1433; Database=Caminata; User Id=Emma; password= 0000");
+        private static SqlConnection conexion = new SqlConnection("Server=186.15.160.198,1433; Database=Caminata; User Id=Emma; password= 0000");
         private static SqlCommand comandosql;
         private static SqlDataReader lectorsql;
 
@@ -99,7 +100,7 @@ namespace ConexionSQL
             }
         }
 
-        public void AgregarAdministrador(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
+        public void agregarAdministrador(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
         {
             try
             {
@@ -118,9 +119,11 @@ namespace ConexionSQL
                 lectorsql = comandosql.ExecuteReader();
                 Console.WriteLine("Ejecutado Correctamente");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
+                throw new Exception(e.ToString());
                 MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.agregaAdministrador()");
             }
             // terminar la conexion despues de manejar los datos de la tabla
             finally
@@ -129,8 +132,94 @@ namespace ConexionSQL
             }
         }
 
+        public void agregarUsuarioICT(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_AgregarUsuarioICT");
 
-        public int ExisteAlias(string alias)
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
+                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = contrasena;
+                comandosql.Parameters.Add("@primerNombre", SqlDbType.VarChar).Value = primerNombre;
+                comandosql.Parameters.Add("@primerApellido", SqlDbType.VarChar).Value = primerApellido;
+                comandosql.Parameters.Add("@segundoApellido", SqlDbType.VarChar).Value = segundoApellido;
+                comandosql.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
+                comandosql.Parameters.Add("@fechaNac", SqlDbType.Date).Value = fechaNac;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.agregarUsuarioICT()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void borrarUsuarioICT(UsuarioICT usuario)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_BorrarUsuarioICT");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = usuario.alias;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.borrarAdministrador()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public int loginAdministrador(string alias, string contrasena)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_LoginAdministrador");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
+                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = contrasena;
+
+                // asocia el parametro de regreso
+                var returnParameter = comandosql.Parameters.Add("@conectado", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+                var val = returnParameter.Value;
+                return (int)val;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.loginAdministrador()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public int existeAlias(string alias)
         {
             try
             {
@@ -140,7 +229,7 @@ namespace ConexionSQL
                 comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
 
                 // asocia el parametro de regreso
-                var returnParameter = comandosql.Parameters.Add("@idOrden", SqlDbType.Int);
+                var returnParameter = comandosql.Parameters.Add("@existe", SqlDbType.Int);
                 returnParameter.Direction = ParameterDirection.ReturnValue;
                 // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
                 lectorsql = comandosql.ExecuteReader();
@@ -160,6 +249,114 @@ namespace ConexionSQL
             }
         }
 
+        public void borrarAdministrador(Administrador admin)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_BorrarAdministrador");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = admin.alias;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.borrarAdministrador()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public List<Administrador> SeleccionaAdministradores()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarAdministradores");
+                
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<Administrador> listaAdministradores = new List<Administrador>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    Administrador admin = new Administrador();
+
+                    //Alias, P.PrimerNombre, P.PrimerApellido, P.SegundoApellido, FechaNac, Cedula, IdPersona
+                    admin.alias = (string)lectorsql["Alias"];
+                    admin.primerNombre = (string)lectorsql["PrimerNombre"];
+                    admin.segundoApellido = (string)lectorsql["SegundoApellido"];
+                    admin.fechaNac = (DateTime)lectorsql["FechaNac"];
+                    admin.cedula = (int)lectorsql["Cedula"];
+                    admin.IdPersona = (int)lectorsql["IdPersona"];
+
+                    listaAdministradores.Add(admin);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaAdministradores;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.SeleccionaAdministradores()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public List<UsuarioICT> SeleccionaUsuariosICT()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarUsuariosICT");
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<UsuarioICT> listaAdministradores = new List<UsuarioICT>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    UsuarioICT admin = new UsuarioICT();
+
+                    //Alias, P.PrimerNombre, P.PrimerApellido, P.SegundoApellido, FechaNac, Cedula, IdPersona
+                    admin.alias = (string)lectorsql["Alias"];
+                    admin.primerNombre = (string)lectorsql["PrimerNombre"];
+                    admin.segundoApellido = (string)lectorsql["SegundoApellido"];
+                    admin.fechaNac = (DateTime)lectorsql["FechaNac"];
+                    admin.cedula = (int)lectorsql["Cedula"];
+                    admin.IdPersona = (int)lectorsql["IdPersona"];
+
+                    listaAdministradores.Add(admin);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaAdministradores;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.SeleccionaUsuariosICT()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
 
         /*
         public void procedimientoEjemplo()
