@@ -207,9 +207,10 @@ namespace AdminPlataforma
         private void buttonDesactivarAdmins_Click(object sender, EventArgs e)
         {
             // esta lineas asocian el administrador en memoria con el listview
-            int indexAdminListView = listViewUsuariosAdministradores.SelectedIndices[0];
-            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[indexAdminListView];
-
+            int index = listViewUsuariosAdministradores.SelectedIndices[0];
+            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[index];
+            SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(index);
+            SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
 
         }
 
@@ -220,6 +221,11 @@ namespace AdminPlataforma
             UsuarioICT usuario = SesionActual.getInstance().modUsuariosICT.listaUsuarios[index];
             SesionActual.getInstance().modUsuariosICT.listaUsuarios.RemoveAt(index);
             SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
+        }
+
+        private void buttonCargaDatosNivelesDificultad_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
