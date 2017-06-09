@@ -56,8 +56,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxContrasena, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.buttonProbar, 2, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 18);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.165597F));
@@ -67,7 +66,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.9724F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.9724F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.9724F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(428, 443);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(285, 288);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // buttonInicioSesion
@@ -76,10 +75,9 @@
             this.buttonInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.buttonInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInicioSesion.Location = new System.Drawing.Point(117, 312);
-            this.buttonInicioSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonInicioSesion.Location = new System.Drawing.Point(77, 204);
             this.buttonInicioSesion.Name = "buttonInicioSesion";
-            this.buttonInicioSesion.Size = new System.Drawing.Size(201, 42);
+            this.buttonInicioSesion.Size = new System.Drawing.Size(134, 27);
             this.buttonInicioSesion.TabIndex = 0;
             this.buttonInicioSesion.Text = "Iniciar Sesion";
             this.buttonInicioSesion.UseVisualStyleBackColor = false;
@@ -91,10 +89,9 @@
             this.linkLabelRegistrarNuevoUsuario.AutoSize = true;
             this.linkLabelRegistrarNuevoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRegistrarNuevoUsuario.LinkColor = System.Drawing.Color.DarkRed;
-            this.linkLabelRegistrarNuevoUsuario.Location = new System.Drawing.Point(147, 383);
-            this.linkLabelRegistrarNuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabelRegistrarNuevoUsuario.Location = new System.Drawing.Point(97, 249);
             this.linkLabelRegistrarNuevoUsuario.Name = "linkLabelRegistrarNuevoUsuario";
-            this.linkLabelRegistrarNuevoUsuario.Size = new System.Drawing.Size(140, 44);
+            this.linkLabelRegistrarNuevoUsuario.Size = new System.Drawing.Size(95, 30);
             this.linkLabelRegistrarNuevoUsuario.TabIndex = 3;
             this.linkLabelRegistrarNuevoUsuario.TabStop = true;
             this.linkLabelRegistrarNuevoUsuario.Text = "Registrar Nuevo Administrador";
@@ -106,10 +103,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(149, 178);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(98, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 29);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,11 +117,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(185)))), ((int)(((byte)(181)))));
             this.textBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxUsuario.Location = new System.Drawing.Point(104, 94);
-            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.textBoxUsuario.MinimumSize = new System.Drawing.Size(4, 3);
+            this.textBoxUsuario.Location = new System.Drawing.Point(69, 61);
+            this.textBoxUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxUsuario.MinimumSize = new System.Drawing.Size(3, 3);
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(227, 26);
+            this.textBoxUsuario.Size = new System.Drawing.Size(151, 20);
             this.textBoxUsuario.TabIndex = 1;
             // 
             // label1
@@ -133,10 +129,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(169, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(112, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 29);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,11 +143,10 @@
             this.textBoxContrasena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContrasena.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxContrasena.Location = new System.Drawing.Point(102, 248);
-            this.textBoxContrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxContrasena.Location = new System.Drawing.Point(68, 161);
             this.textBoxContrasena.Name = "textBoxContrasena";
             this.textBoxContrasena.PasswordChar = '*';
-            this.textBoxContrasena.Size = new System.Drawing.Size(231, 30);
+            this.textBoxContrasena.Size = new System.Drawing.Size(153, 22);
             this.textBoxContrasena.TabIndex = 1;
             this.textBoxContrasena.TextChanged += new System.EventHandler(this.textBoxContrasena_TextChanged);
             // 
@@ -162,10 +156,9 @@
             this.buttonProbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.buttonProbar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProbar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProbar.Location = new System.Drawing.Point(341, 242);
-            this.buttonProbar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonProbar.Location = new System.Drawing.Point(227, 158);
             this.buttonProbar.Name = "buttonProbar";
-            this.buttonProbar.Size = new System.Drawing.Size(82, 42);
+            this.buttonProbar.Size = new System.Drawing.Size(55, 27);
             this.buttonProbar.TabIndex = 0;
             this.buttonProbar.Text = "Test";
             this.buttonProbar.UseVisualStyleBackColor = false;
@@ -174,12 +167,11 @@
             // InicioSesion
             // 
             this.AcceptButton = this.buttonInicioSesion;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(246)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(464, 480);
+            this.ClientSize = new System.Drawing.Size(309, 312);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "InicioSesion";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

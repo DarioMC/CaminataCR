@@ -56,5 +56,13 @@ namespace BusinessLayer
         {
             conexionSQL.getInstance().borrarAdministrador(admin);
         }
+
+        public void editarAdministrador(Administrador admin)
+        {
+            ContrasenaEncriptada contrasenaEncriptada;
+            contrasenaEncriptada = new ContrasenaEncriptada(admin.contrasena);
+            admin.contrasena = contrasenaEncriptada.getContrasenaEncriptadaTira();
+            conexionSQL.getInstance().editarAdministrador(admin);
+        }
     }
 }

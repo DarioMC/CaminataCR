@@ -13,7 +13,7 @@ namespace EntityObjects
         public string alias;
         public string segundoApellido;
         public DateTime fechaNac;
-        public int cedula;
+        public string cedula;
         public string contrasena;
         public int IdPersona;
     }

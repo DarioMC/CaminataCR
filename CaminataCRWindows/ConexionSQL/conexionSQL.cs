@@ -16,7 +16,7 @@ namespace ConexionSQL
         // crear un singleton
         private static conexionSQL singletonInstance = null;
 
-        private static SqlConnection conexion = new SqlConnection("Server=186.15.160.198,1433; Database=Caminata; User Id=Emma; password= 0000");
+        private static SqlConnection conexion = new SqlConnection("Server=186.15.10.94,1433; Database=Caminata; User Id=Emma; password= 0000");
         private static SqlCommand comandosql;
         private static SqlDataReader lectorsql;
 
@@ -100,6 +100,43 @@ namespace ConexionSQL
             }
         }
 
+        public int existeAlias(string alias)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_ExisteAlias");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
+
+                // asocia el parametro de regreso
+                var returnParameter = comandosql.Parameters.Add("@existe", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+                var val = returnParameter.Value;
+                return (int)val;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.ExisteAlias()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+
+
         public void agregarAdministrador(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
         {
             try
@@ -132,20 +169,20 @@ namespace ConexionSQL
             }
         }
 
-        public void agregarUsuarioICT(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
+        public void editarAdministrador(Administrador admin)
         {
             try
             {
-                this.abrirConexionSP("SPS_AgregarUsuarioICT");
+                this.abrirConexionSP("SPS_EditarAdministrador");
 
                 //agregar parametros
-                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
-                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = contrasena;
-                comandosql.Parameters.Add("@primerNombre", SqlDbType.VarChar).Value = primerNombre;
-                comandosql.Parameters.Add("@primerApellido", SqlDbType.VarChar).Value = primerApellido;
-                comandosql.Parameters.Add("@segundoApellido", SqlDbType.VarChar).Value = segundoApellido;
-                comandosql.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
-                comandosql.Parameters.Add("@fechaNac", SqlDbType.Date).Value = fechaNac;
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = admin.alias;
+                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = admin.contrasena;
+                comandosql.Parameters.Add("@primerNombre", SqlDbType.VarChar).Value = admin.primerNombre;
+                comandosql.Parameters.Add("@primerApellido", SqlDbType.VarChar).Value = admin.primerApellido;
+                comandosql.Parameters.Add("@segundoApellido", SqlDbType.VarChar).Value = admin.segundoApellido;
+                comandosql.Parameters.Add("@cedula", SqlDbType.VarChar).Value = admin.cedula;
+                comandosql.Parameters.Add("@fechaNac", SqlDbType.Date).Value = admin.fechaNac;
 
                 // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
                 lectorsql = comandosql.ExecuteReader();
@@ -153,33 +190,9 @@ namespace ConexionSQL
             }
             catch (Exception e)
             {
+                throw new Exception(e.ToString());
                 MessageBox.Show("Error: " + e);
-                throw new Exception("Ocurrio un error conexion.SQL.agregarUsuarioICT()");
-            }
-            // terminar la conexion despues de manejar los datos de la tabla
-            finally
-            {
-                this.terminaConexionSO();
-            }
-        }
-
-        public void borrarUsuarioICT(UsuarioICT usuario)
-        {
-            try
-            {
-                this.abrirConexionSP("SPS_BorrarUsuarioICT");
-
-                //agregar parametros
-                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = usuario.alias;
-
-                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
-                lectorsql = comandosql.ExecuteReader();
-                Console.WriteLine("Ejecutado Correctamente");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error: " + e);
-                throw new Exception("Ocurrio un error conexion.SQL.borrarAdministrador()");
+                throw new Exception("Ocurrio un error conexion.SQL.agregaAdministrador()");
             }
             // terminar la conexion despues de manejar los datos de la tabla
             finally
@@ -211,36 +224,6 @@ namespace ConexionSQL
             {
                 MessageBox.Show("Error: " + e);
                 throw new Exception("Ocurrio un error conexion.SQL.loginAdministrador()");
-            }
-            // terminar la conexion despues de manejar los datos de la tabla
-            finally
-            {
-                this.terminaConexionSO();
-            }
-        }
-
-        public int existeAlias(string alias)
-        {
-            try
-            {
-                this.abrirConexionSP("SPS_ExisteAlias");
-
-                //agregar parametros
-                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
-
-                // asocia el parametro de regreso
-                var returnParameter = comandosql.Parameters.Add("@existe", SqlDbType.Int);
-                returnParameter.Direction = ParameterDirection.ReturnValue;
-                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
-                lectorsql = comandosql.ExecuteReader();
-                Console.WriteLine("Ejecutado Correctamente");
-                var val = returnParameter.Value;
-                return (int)val;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error: " + e);
-                throw new Exception("Ocurrio un error conexion.SQL.ExisteAlias()");
             }
             // terminar la conexion despues de manejar los datos de la tabla
             finally
@@ -296,7 +279,7 @@ namespace ConexionSQL
                     admin.primerNombre = (string)lectorsql["PrimerNombre"];
                     admin.segundoApellido = (string)lectorsql["SegundoApellido"];
                     admin.fechaNac = (DateTime)lectorsql["FechaNac"];
-                    admin.cedula = (int)lectorsql["Cedula"];
+                    admin.cedula = (string)lectorsql["Cedula"];
                     admin.IdPersona = (int)lectorsql["IdPersona"];
 
                     listaAdministradores.Add(admin);
@@ -316,7 +299,103 @@ namespace ConexionSQL
             }
         }
 
-        public List<UsuarioICT> SeleccionaUsuariosICT()
+
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+
+
+        public void agregarUsuarioICT(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_AgregarUsuarioICT");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
+                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = contrasena;
+                comandosql.Parameters.Add("@primerNombre", SqlDbType.VarChar).Value = primerNombre;
+                comandosql.Parameters.Add("@primerApellido", SqlDbType.VarChar).Value = primerApellido;
+                comandosql.Parameters.Add("@segundoApellido", SqlDbType.VarChar).Value = segundoApellido;
+                comandosql.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
+                comandosql.Parameters.Add("@fechaNac", SqlDbType.Date).Value = fechaNac;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.agregarUsuarioICT()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void editarUsuarioICT(UsuarioICT admin)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_EditarUsuarioICT");
+                
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = admin.alias;
+                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = admin.contrasena;
+                comandosql.Parameters.Add("@primerNombre", SqlDbType.VarChar).Value = admin.primerNombre;
+                comandosql.Parameters.Add("@primerApellido", SqlDbType.VarChar).Value = admin.primerApellido;
+                comandosql.Parameters.Add("@segundoApellido", SqlDbType.VarChar).Value = admin.segundoApellido;
+                comandosql.Parameters.Add("@cedula", SqlDbType.VarChar).Value = admin.cedula;
+                comandosql.Parameters.Add("@fechaNac", SqlDbType.Date).Value = admin.fechaNac;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.editarUsuarioICT()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void borrarUsuarioICT(UsuarioICT usuario)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_BorrarUsuarioICT");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = usuario.alias;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.borrarUsuarioICT()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public List<UsuarioICT> seleccionaUsuariosICT()
         {
             try
             {
@@ -338,7 +417,7 @@ namespace ConexionSQL
                     admin.primerNombre = (string)lectorsql["PrimerNombre"];
                     admin.segundoApellido = (string)lectorsql["SegundoApellido"];
                     admin.fechaNac = (DateTime)lectorsql["FechaNac"];
-                    admin.cedula = (int)lectorsql["Cedula"];
+                    admin.cedula = (string)lectorsql["Cedula"];
                     admin.IdPersona = (int)lectorsql["IdPersona"];
 
                     listaAdministradores.Add(admin);
@@ -350,6 +429,148 @@ namespace ConexionSQL
             {
                 MessageBox.Show("Error: " + e);
                 throw new Exception("Ocurrio un error conexion.SQL.SeleccionaUsuariosICT()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO HIKERS -------------------------------------------------------
+        // ------------------------------------------------------- MODULO HIKERS -------------------------------------------------------
+        // ------------------------------------------------------- MODULO HIKERS -------------------------------------------------------
+
+        public List<Hiker> seleccionaHikers()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarHikers");
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<Hiker> listaHikers = new List<Hiker>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    Hiker hiker = new Hiker();
+
+                    //Alias, P.PrimerNombre, P.PrimerApellido, P.SegundoApellido, FechaNac, Cedula, IdPersona
+                    hiker.alias = (string)lectorsql["Alias"];
+                    hiker.primerNombre = (string)lectorsql["PrimerNombre"];
+                    hiker.segundoApellido = (string)lectorsql["SegundoApellido"];
+                    hiker.fechaNac = (DateTime)lectorsql["FechaNac"];
+                    hiker.cedula = (string)lectorsql["Cedula"];
+                    hiker.IdPersona = (int)lectorsql["IdPersona"];
+                    hiker.cuentaBancaria = (int)lectorsql["CuentaBancaria"];
+
+                    listaHikers.Add(hiker);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaHikers;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.seleccionaHikers()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO NIVELES DIFICULTAD -------------------------------------------------------
+        // ------------------------------------------------------- MODULO NIVELES DIFICULTAD -------------------------------------------------------
+        // ------------------------------------------------------- MODULO NIVELES DIFICULTAD -------------------------------------------------------
+
+        public List<Dificultad> seleccionaNivelesDificultad()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarNivelesDificultad");
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<Dificultad> listaDificultades = new List<Dificultad>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    Dificultad dificultad = new Dificultad();
+
+                    dificultad.idNivel = (int)lectorsql["Nivel"];
+                    dificultad.descripcion = (string)lectorsql["Descripcion"];
+
+                    //agregar habilitado
+
+                    listaDificultades.Add(dificultad);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaDificultades;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.seleccionaDificultades()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void editarNivelDificultad(Dificultad dificultad)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_EditarNivelDificultad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idPk", SqlDbType.Int).Value = dificultad.idNivel;
+                comandosql.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = dificultad.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.editarNivelDificultad()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+        public void agregarNivelDificultad(Dificultad dificultad)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_AgregarNivelDificultad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@comentario", SqlDbType.VarChar).Value = dificultad.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.AgregarNivelDificultad()");
             }
             // terminar la conexion despues de manejar los datos de la tabla
             finally

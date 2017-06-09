@@ -54,6 +54,18 @@
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="NDAgregarNivelDificultad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NDAgregarNivelDificultad.Designer.cs">
+      <DependentUpon>NDAgregarNivelDificultad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NDEditarNivelDificultad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NDEditarNivelDificultad.Designer.cs">
+      <DependentUpon>NDEditarNivelDificultad.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UAEditarAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UAEditarAdmins.Designer.cs">
+      <DependentUpon>UAEditarAdmins.cs</DependentUpon>
+    </Compile>
     <Compile Include="UAAgregarAdmins.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,8 +92,20 @@
     <Compile Include="UICTAgregarUsuario.Designer.cs">
       <DependentUpon>UICTAgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="UICTEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UICTEditarUsuario.Designer.cs">
+      <DependentUpon>UICTEditarUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NDAgregarNivelDificultad.resx">
+      <DependentUpon>NDAgregarNivelDificultad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NDEditarNivelDificultad.resx">
+      <DependentUpon>NDEditarNivelDificultad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelControl.resx">
       <DependentUpon>PanelControl.cs</DependentUpon>
@@ -90,11 +120,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UAEditarAdmins.resx">
+      <DependentUpon>UAEditarAdmins.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UAAgregarAdmins.resx">
       <DependentUpon>UAAgregarAdmins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UICTAgregarUsuario.resx">
       <DependentUpon>UICTAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UICTEditarUsuario.resx">
+      <DependentUpon>UICTEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

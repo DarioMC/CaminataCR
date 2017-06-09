@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace EntityObjects
 {
-    public class Hiker : Persona
+    public class Dificultad
     {
-        public int cuentaBancaria;
+        public int idNivel;
+        public string descripcion;
         public bool habilitado;
     }
 }

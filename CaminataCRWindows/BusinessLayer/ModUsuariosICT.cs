@@ -23,7 +23,7 @@ namespace BusinessLayer
         /// </summary>
         public void cargaUsuarios()
         {
-            listaUsuarios = conexionSQL.getInstance().SeleccionaUsuariosICT();
+            listaUsuarios = conexionSQL.getInstance().seleccionaUsuariosICT();
         }
 
         public void agregarUsuarioICT(string alias, string contrasena, string primerNombre, string primerApellido, string segundoApellido, string fechaNac, string cedula)
@@ -44,6 +44,11 @@ namespace BusinessLayer
         public void borrarUsuarioICT(UsuarioICT usuario)
         {
             conexionSQL.getInstance().borrarUsuarioICT(usuario);
+        }
+
+        public void editarUsuarioICT(UsuarioICT usuario)
+        {
+            conexionSQL.getInstance().editarUsuarioICT(usuario);
         }
     }
 }

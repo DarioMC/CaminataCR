@@ -23,7 +23,8 @@ namespace AdminPlataforma
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            textBoxUsuario.Text = "Piccolo";
+            textBoxContrasena.Text = "123";
         }
 
         private void initFont()

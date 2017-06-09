@@ -59,40 +59,6 @@ namespace AdminPlataforma
             tabControlPaginas.SelectTab(6);
         }
 
-        private void buttonCargaDatos_Click(object sender, EventArgs e)
-        {
-           listViewUsuariosAdministradores.Items.Clear();
-           // carga los admins otra vez (por si hay cambios)
-           SesionActual.getInstance().modUsuariosAdministrador.cargarAdministradores();
-            foreach (Administrador admin in SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores)
-            {
-                ListViewItem linea = new ListViewItem(admin.primerNombre);
-                linea.SubItems.Add(admin.alias);
-                listViewUsuariosAdministradores.Items.Add(linea);
-            }
-            /*
-            foreach (PlatilloCuenta platilloCuenta in FrVerMenuOrdenar.cuenta)
-            {
-                ListViewItem linea = new ListViewItem(platilloCuenta.platoNombre);
-                linea.SubItems.Add(platilloCuenta.usuario);
-                linea.SubItems.Add(platilloCuenta.precio.ToString());
-                listViewReporteCliente.Items.Add(linea);
-            }
-            */
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PanelControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void labelCloseButton_Click_1(object sender, EventArgs e)
         {
             if (Application.MessageLoop)
@@ -132,17 +98,42 @@ namespace AdminPlataforma
             Cursor = Cursors.Hand;
         }
 
+
+
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+        // ------------------------------------------------------- MODULO ADMINISTRADOR -------------------------------------------------------
+
+        private void buttonCargaDatos_Click(object sender, EventArgs e)
+        {
+            listViewUsuariosAdministradores.Items.Clear();
+            // carga los admins otra vez (por si hay cambios)
+            SesionActual.getInstance().modUsuariosAdministrador.cargarAdministradores();
+            foreach (Administrador admin in SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores)
+            {
+                ListViewItem linea = new ListViewItem(admin.primerNombre);
+                linea.SubItems.Add(admin.alias);
+                listViewUsuariosAdministradores.Items.Add(linea);
+            }
+            /*
+            foreach (PlatilloCuenta platilloCuenta in FrVerMenuOrdenar.cuenta)
+            {
+                ListViewItem linea = new ListViewItem(platilloCuenta.platoNombre);
+                linea.SubItems.Add(platilloCuenta.usuario);
+                linea.SubItems.Add(platilloCuenta.precio.ToString());
+                listViewReporteCliente.Items.Add(linea);
+            }
+            */
+        }
+
         private void buttonAgregarAdmins_Click(object sender, EventArgs e)
         {
             this.Hide();
             UAAgregarAdmins window = new UAAgregarAdmins();
             window.ShowDialog();
             this.Show();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonEditarAdmins_Click(object sender, EventArgs e)
@@ -152,13 +143,11 @@ namespace AdminPlataforma
             MessageBox.Show("Index: " + indexAdminListView.ToString());
 
             Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[indexAdminListView];
-            SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(indexAdminListView);
-            SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
             MessageBox.Show("Usuario: " + admin.alias);
 
 
             this.Hide();
-            UAAgregarAdmins window = new UAAgregarAdmins(admin);
+            UAEditarAdmins window = new UAEditarAdmins(admin);
             window.ShowDialog();
             this.Show();
 
@@ -185,6 +174,26 @@ namespace AdminPlataforma
             MessageBox.Show("Index: " + indexAdminListView.ToString() + " Usuario: " + admin.alias);
         }
 
+
+        private void buttonDesactivarAdmins_Click(object sender, EventArgs e)
+        {
+            /*
+            // esta lineas asocian el administrador en memoria con el listview
+            int index = listViewUsuariosAdministradores.SelectedIndices[0];
+            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[index];
+            SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(index);
+            SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
+            */
+        }
+
+
+
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+        // ------------------------------------------------------- MODULO USUARIO ICT -------------------------------------------------------
+
         private void buttonCargaDatosUICT_Click(object sender, EventArgs e)
         {
             listViewUsuariosICT.Items.Clear();
@@ -204,16 +213,6 @@ namespace AdminPlataforma
             this.Show();
         }
 
-        private void buttonDesactivarAdmins_Click(object sender, EventArgs e)
-        {
-            // esta lineas asocian el administrador en memoria con el listview
-            int index = listViewUsuariosAdministradores.SelectedIndices[0];
-            Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[index];
-            SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(index);
-            SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
-
-        }
-
         private void buttonEliminarUsuariosICT_Click(object sender, EventArgs e)
         {
             int index = listViewUsuariosICT.SelectedIndices[0];
@@ -223,10 +222,93 @@ namespace AdminPlataforma
             SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
         }
 
+
+
+        private void buttonEditarUICT_Click(object sender, EventArgs e)
+        {
+            int indexAdminListView = listViewUsuariosICT.SelectedIndices[0];
+            MessageBox.Show("Index: " + indexAdminListView.ToString());
+
+            UsuarioICT user = SesionActual.getInstance().modUsuariosICT.listaUsuarios[indexAdminListView];
+            MessageBox.Show("Usuario: " + user.alias);
+
+
+            this.Hide();
+            UICTEditarUsuario window = new UICTEditarUsuario(user);
+            window.ShowDialog();
+            this.Show();
+        }
+
+
+
+        // ----------------------------------------------------- MODULO NIVELES DIFICULTAD -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES DIFICULTAD -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES DIFICULTAD -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES DIFICULTAD -----------------------------------------------------
+
+
+
         private void buttonCargaDatosNivelesDificultad_Click(object sender, EventArgs e)
+        {
+            listViewNivelesDificultad.Items.Clear();
+            foreach (Dificultad dificultad in SesionActual.getInstance().modNivDificultad.listaDificultades)
+            {
+                ListViewItem linea = new ListViewItem(dificultad.idNivel.ToString());
+                linea.SubItems.Add(dificultad.descripcion);
+                listViewNivelesDificultad.Items.Add(linea);
+            }
+        }
+
+        private void buttonEditarNivelesDificultad_Click(object sender, EventArgs e)
+        {
+
+            int indexNivelDificultadListView = listViewNivelesDificultad.SelectedIndices[0];
+            MessageBox.Show("Index: " + indexNivelDificultadListView.ToString());
+
+            Dificultad dificultad = SesionActual.getInstance().modNivDificultad.listaDificultades[indexNivelDificultadListView];
+            MessageBox.Show("Usuario: " + dificultad.idNivel);
+
+            // codigo template
+
+            this.Hide();
+            NDEditarNivelDificultad window = new NDEditarNivelDificultad(dificultad);
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonAgregarNivelesDificultad_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NDAgregarNivelDificultad window = new NDAgregarNivelDificultad();
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonEliminarNivelDificultad_Click(object sender, EventArgs e)
         {
 
         }
+
+        // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
+
+
+        private void buttonCargaDatosUsuariosRegulares_Click(object sender, EventArgs e)
+        {
+            listViewUsuariosRegulares.Items.Clear();
+            // carga los DatosNiveles otra vez (por si hay cambios)
+            SesionActual.getInstance().modUsuariosRegulares.cargaUsuarios();
+            foreach (Hiker user in SesionActual.getInstance().modUsuariosRegulares.listaHikers)
+            {
+                ListViewItem linea = new ListViewItem(user.primerNombre);
+                linea.SubItems.Add(user.alias);
+                listViewUsuariosRegulares.Items.Add(linea);
+            }
+        }
+
+        // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
+
+
+
     }
     
 }

@@ -23,7 +23,7 @@ namespace AdminPlataforma
         {
             InitializeComponent();
             this.textBoxNombre.Text = admin.primerNombre;
-            this.textBoxCedula.Text = admin.cedula.ToString();
+            this.textBoxCedula.Text = admin.cedula;
             this.textBoxPrimerApellido.Text = admin.primerApellido;
             this.textBoxUsuario.Text = admin.alias;
             this.dateTimePickerFechaNac.Value = admin.fechaNac;
