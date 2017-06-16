@@ -1,7 +1,7 @@
 USE [Caminata]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SPS_SeleccionarCaminatasHabHiker]    Script Date: 15/6/2017 00:44:26: AM ******/
+/****** Object:  StoredProcedure [dbo].[SPS_SeleccionarCaminatasHabHiker]    Script Date: 15/6/2017 21:33:58: PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -10,13 +10,20 @@ GO
 
 
 
+
+
+
 CREATE PROCEDURE [dbo].[SPS_SeleccionarCaminatasHabHiker](
 	@idhiker int
 )
 AS BEGIN
-SELECT DISTINCT C.IdCaminata, TC.Descripcion, C.Direccion, C.Fecha, C.Latitud, C.Longitud, C.Precio, IC.Imagen, 
-		D.Nombre + ', ' + Ca.Nombre + ', ' + P.Nombre Lugar
+SELECT DISTINCT C.Nombre CNombre,C.IdCaminata, TC.Descripcion, C.Direccion, C.Fecha, C.Latitud, C.Longitud, C.Precio, IC.Imagen, 
+		D.Nombre + ', ' + Ca.Nombre + ', ' + P.Nombre Lugar,Pe.Alias HAlias
 	FROM CaminataXHiker CH
+		inner join dbo.Hiker H
+			on CH.IdHiker = H.IdHiker
+		inner join dbo.Persona Pe
+			on Pe.IdPersona = H.IdHiker
 		inner join Caminata C
 			ON CH.IdCaminata = C.IdCaminata
 		left join ImagenCaminata IC
@@ -31,6 +38,9 @@ SELECT DISTINCT C.IdCaminata, TC.Descripcion, C.Direccion, C.Fecha, C.Latitud, C
 			ON Ca.IdProvincia = P.IdProvincia
 	WHERE ch.IdHiker = @idhiker and c.Habilitado = 1
 END
+
+
+
 
 
 GO
