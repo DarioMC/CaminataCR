@@ -897,6 +897,13 @@ namespace ConexionSQL
         // ------------------------------------------------------- MODULO CONSULTAS -------------------------------------------------------
         // ------------------------------------------------------- MODULO CONSULTAS -------------------------------------------------------
 
+
+
+        // ------------------------------------------------------- MODULO CONSULTAS USUARIOS APORTES -------------------------------------------------------
+        // ------------------------------------------------------- MODULO CONSULTAS USUARIOS APORTES -------------------------------------------------------
+        // ------------------------------------------------------- MODULO CONSULTAS USUARIOS APORTES -------------------------------------------------------
+
+
         public int loginICT(string alias, string contrasena)
         {
             try
@@ -969,6 +976,157 @@ namespace ConexionSQL
                     //lista.Add(mesa); // se agregar elemento a la lista que se retornara
                 }
                 return listaUsuarios;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.consultaUsuarios()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO CONSULTAS REPORTE REMUNERACIONES -------------------------------------------------------
+        // ------------------------------------------------------- MODULO CONSULTAS REPORTE REMUNERACIONES -------------------------------------------------------
+        // ------------------------------------------------------- MODULO CONSULTAS REPORTE REMUNERACIONES -------------------------------------------------------
+
+        public List<UsuarioReporteRemuneraciones> consultaReporteRemuneraciones(int n, DateTime fechaInicio, DateTime fechaFinal)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_ConsultaReporteRemuneraciones");
+
+                comandosql.Parameters.Add("@n", SqlDbType.Int).Value = n;
+                comandosql.Parameters.Add("@fechaInicio", SqlDbType.DateTime).Value = fechaInicio;
+                comandosql.Parameters.Add("@fechaFinal", SqlDbType.DateTime).Value = fechaFinal;
+
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<UsuarioReporteRemuneraciones> listaUsuarios = new List<UsuarioReporteRemuneraciones>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                // en este caso: PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, Imagen, CuentaBancaria, 
+                // Cantidad Caminatas, Puntos Geograficos, Likes
+                while (lectorsql.Read())
+                {
+                    UsuarioReporteRemuneraciones usuario = new UsuarioReporteRemuneraciones();
+
+                    usuario.primerNombre = (string)lectorsql["PrimerNombre"];
+                    usuario.primerApellido = (string)lectorsql["PrimerApellido"];
+                    usuario.segundoApellido = (string)lectorsql["SegundoApellido"];
+                    usuario.alias = (string)lectorsql["Alias"];
+                    usuario.montoTotal = (int)lectorsql["MontoTotal"];
+
+
+                    //agregar habilitado
+
+                    listaUsuarios.Add(usuario);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaUsuarios;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.consultaUsuarios()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO CONSULTAS Gustos de rutas -------------------------------------------------------
+
+        public List<CaminataLikes> consultaRutasLikes(int top, bool orden, DateTime fechaInicial, DateTime fechaFinal)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_GustosRutasXLikes");
+
+                comandosql.Parameters.Add("@top", SqlDbType.Int).Value = top;
+                comandosql.Parameters.Add("@orden", SqlDbType.Bit).Value = orden;
+                comandosql.Parameters.Add("@fecha1", SqlDbType.DateTime).Value = fechaInicial;
+                comandosql.Parameters.Add("@fecha2", SqlDbType.DateTime).Value = fechaFinal;
+
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<CaminataLikes> listaCaminata = new List<CaminataLikes>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                // en este caso: PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, Imagen, CuentaBancaria, 
+                // Cantidad Caminatas, Puntos Geograficos, Likes
+                while (lectorsql.Read())
+                {
+                    CaminataLikes caminata = new CaminataLikes();
+
+                    caminata.nombre = (string)lectorsql["Nombre"];
+                    caminata.likes = (int)lectorsql["Likes"];
+                    caminata.idCaminata = (int)lectorsql["IdCaminata"];
+
+                    //agregar habilitado
+
+                    listaCaminata.Add(caminata);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaCaminata;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.consultaUsuarios()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public List<Puntos> consultaRutasCaminata(int id)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_GustosRutasXCaminata");
+
+                comandosql.Parameters.Add("@idCaminata", SqlDbType.Int).Value = id;
+
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<Puntos> listaCaminata = new List<Puntos>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                // en este caso: PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, Imagen, CuentaBancaria, 
+                // Cantidad Caminatas, Puntos Geograficos, Likes
+                while (lectorsql.Read())
+                {
+                    Puntos punto = new Puntos();
+
+                    punto.puntoReportado = (int)lectorsql["Punto Reportado"];
+                    punto.latitud = (double)lectorsql["Latitud Punto"];
+                    punto.longitud = (double)lectorsql["Longitud Punto"];
+                    punto.comentario = (string)lectorsql["Comentario"];
+                    //punto.foto = (byte[])lectorsql["Imagen evento"];
+
+                    //agregar habilitado
+
+                    listaCaminata.Add(punto);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaCaminata;
             }
             catch (Exception e)
             {
