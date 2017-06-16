@@ -54,6 +54,18 @@
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="NCAgregarNivelCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NCAgregarNivelCalidad.Designer.cs">
+      <DependentUpon>NCAgregarNivelCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NCEditarNivelCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NCEditarNivelCalidad.Designer.cs">
+      <DependentUpon>NCEditarNivelCalidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="NDAgregarNivelDificultad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +78,18 @@
     <Compile Include="NDEditarNivelDificultad.Designer.cs">
       <DependentUpon>NDEditarNivelDificultad.cs</DependentUpon>
     </Compile>
+    <Compile Include="NPAgregarNivelPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPAgregarNivelPrecio.Designer.cs">
+      <DependentUpon>NPAgregarNivelPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPEditarNivelPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPEditarNivelPrecio.Designer.cs">
+      <DependentUpon>NPEditarNivelPrecio.cs</DependentUpon>
+    </Compile>
     <Compile Include="PanelControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +98,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TCAgregarTipoCaminata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCAgregarTipoCaminata.Designer.cs">
+      <DependentUpon>TCAgregarTipoCaminata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCEditarTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCEditarTipo.Designer.cs">
+      <DependentUpon>TCEditarTipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UAEditarAdmins.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +137,23 @@
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NCAgregarNivelCalidad.resx">
+      <DependentUpon>NCAgregarNivelCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NCEditarNivelCalidad.resx">
+      <DependentUpon>NCEditarNivelCalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NDAgregarNivelDificultad.resx">
       <DependentUpon>NDAgregarNivelDificultad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NDEditarNivelDificultad.resx">
       <DependentUpon>NDEditarNivelDificultad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPAgregarNivelPrecio.resx">
+      <DependentUpon>NPAgregarNivelPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPEditarNivelPrecio.resx">
+      <DependentUpon>NPEditarNivelPrecio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelControl.resx">
       <DependentUpon>PanelControl.cs</DependentUpon>
@@ -120,6 +168,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TCAgregarTipoCaminata.resx">
+      <DependentUpon>TCAgregarTipoCaminata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCEditarTipo.resx">
+      <DependentUpon>TCEditarTipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UAEditarAdmins.resx">
       <DependentUpon>UAEditarAdmins.cs</DependentUpon>
     </EmbeddedResource>

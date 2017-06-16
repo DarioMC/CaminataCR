@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConexionSQL;
+using EntityObjects;
+using BusinessLayer;
 
 namespace BackOfficeICT
 {
@@ -20,6 +23,27 @@ namespace BackOfficeICT
         private void buttonInicioSesion_Click(object sender, EventArgs e)
         {
 
+            //SesionAdministradorActual = new Administrador();
+            ContrasenaEncriptada contrasenaEncriptada;
+            contrasenaEncriptada = new ContrasenaEncriptada(textBoxContrasena.Text);
+            if (conexionSQL.getInstance().loginICT(textBoxUsuario.Text, contrasenaEncriptada.getContrasenaEncriptadaTira()) == 0)
+            {
+                throw new Exception("contraseña invalida o el usuario no existe");
+            }
+            else
+            {
+                this.Hide();
+                PanelControl window = new PanelControl();
+                window.ShowDialog();
+                this.Close();
+            }
+
+        }
+
+        private void InicioSesion_Load(object sender, EventArgs e)
+        {
+            textBoxUsuario.Text = "Dende";
+            textBoxContrasena.Text = "123";
         }
     }
 }

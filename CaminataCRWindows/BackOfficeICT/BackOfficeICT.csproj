@@ -87,5 +87,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{a3061f78-c94c-40e4-9a84-219ae1c8a6de}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConexionSQL\ConexionSQL.csproj">
+      <Project>{a92f0811-afbf-491c-9bd7-8844e907b701}</Project>
+      <Name>ConexionSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\EntityObjects.csproj">
+      <Project>{66b5aac5-f120-496e-9ff2-1c4471d45100}</Project>
+      <Name>EntityObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

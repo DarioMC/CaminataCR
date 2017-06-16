@@ -197,6 +197,9 @@ namespace AdminPlataforma
         private void buttonCargaDatosUICT_Click(object sender, EventArgs e)
         {
             listViewUsuariosICT.Items.Clear();
+            // cargar otra vez los nuevos datos
+            SesionActual.getInstance().modUsuariosICT.cargaUsuarios();
+
             foreach (UsuarioICT usuario in SesionActual.getInstance().modUsuariosICT.listaUsuarios)
             {
                 ListViewItem linea = new ListViewItem(usuario.alias);
@@ -266,7 +269,7 @@ namespace AdminPlataforma
             MessageBox.Show("Index: " + indexNivelDificultadListView.ToString());
 
             Dificultad dificultad = SesionActual.getInstance().modNivDificultad.listaDificultades[indexNivelDificultadListView];
-            MessageBox.Show("Usuario: " + dificultad.idNivel);
+            MessageBox.Show("Usuario: " + dificultad.descripcion);
 
             // codigo template
 
@@ -290,6 +293,8 @@ namespace AdminPlataforma
         }
 
         // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
+        // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
+        // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
 
 
         private void buttonCargaDatosUsuariosRegulares_Click(object sender, EventArgs e)
@@ -305,10 +310,156 @@ namespace AdminPlataforma
             }
         }
 
-        // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
+        private void buttonDesactivarUsuarioRegular_Click(object sender, EventArgs e)
+        {
+            int indexAdminListView = listViewUsuariosRegulares.SelectedIndices[0];
+            MessageBox.Show("Index: " + indexAdminListView.ToString());
+
+            Hiker user = SesionActual.getInstance().modUsuariosRegulares.listaHikers[indexAdminListView];
+            MessageBox.Show("Usuario: " + user.alias);
+
+
+            try
+            {
+                SesionActual.getInstance().modUsuariosRegulares.inactivarHiker(user);
+                MessageBox.Show("Usuario Desactivado!");
+
+            }
+            catch
+            {
+
+            }
+
+
+        }
+
+
+        // ----------------------------------------------------- MODULO TIPO CAMINATA -----------------------------------------------------
+        // ----------------------------------------------------- MODULO TIPO CAMINATA -----------------------------------------------------
+        // ----------------------------------------------------- MODULO TIPO CAMINATA -----------------------------------------------------
+
+
+        private void buttonCargaDatosTipoCaminata_Click(object sender, EventArgs e)
+        {
+            listViewTipoCaminata.Items.Clear();
+            // carga los DatosNiveles otra vez (por si hay cambios)
+            SesionActual.getInstance().modTipoCaminata.cargaTipoCaminatas();
+            foreach (TipoCaminata tipo in SesionActual.getInstance().modTipoCaminata.listaTiposCaminata)
+            {
+                ListViewItem linea = new ListViewItem(tipo.idTipo.ToString());
+                linea.SubItems.Add(tipo.descripcion);
+                listViewTipoCaminata.Items.Add(linea);
+            }
+        }
+
+        private void buttonEditarTipoCaminata_Click(object sender, EventArgs e)
+        {
+            int indexTipoCaminataListView = listViewTipoCaminata.SelectedIndices[0];
+            MessageBox.Show("Index: " + indexTipoCaminataListView.ToString());
+
+            TipoCaminata tipo = SesionActual.getInstance().modTipoCaminata.listaTiposCaminata[indexTipoCaminataListView];
+            MessageBox.Show("Usuario: " + tipo.descripcion);
+
+            // codigo template
+
+            this.Hide();
+            TCEditarTipo window = new TCEditarTipo(tipo);
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonAgregarTipoCaminata_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NDAgregarNivelDificultad window = new NDAgregarNivelDificultad();
+            window.ShowDialog();
+            this.Show();
+        }
+
+
+        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
+
+        private void buttonCargaDatosNivelesPrecio_Click(object sender, EventArgs e)
+        {
+            listViewNivelesPrecio.Items.Clear();
+            // carga los DatosNiveles otra vez (por si hay cambios)
+            SesionActual.getInstance().modNivPrecio.cargaNiveles();
+            foreach (NivelPrecio nivel in SesionActual.getInstance().modNivPrecio.listaNivelPrecio)
+            {
+                ListViewItem linea = new ListViewItem(nivel.idNivelPrecio.ToString());
+                linea.SubItems.Add(nivel.descripcion);
+                listViewNivelesPrecio.Items.Add(linea);
+            }
+        }
+
+        private void buttonAgregaNivelesPrecio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NPAgregarNivelPrecio window = new NPAgregarNivelPrecio();
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonEditaNivelesPrecio_Click(object sender, EventArgs e)
+        {
+            int indexNivelPrecioListView = listViewNivelesPrecio.SelectedIndices[0];
+            MessageBox.Show("Index: " + indexNivelPrecioListView.ToString());
+
+            NivelPrecio tipo = SesionActual.getInstance().modNivPrecio.listaNivelPrecio[indexNivelPrecioListView];
+            MessageBox.Show("Nivel: " + tipo.idNivelPrecio);
+
+            // codigo template
+
+            this.Hide();
+            NPEditarNivelPrecio window = new NPEditarNivelPrecio(tipo);
+            window.ShowDialog();
+            this.Show();
+        }
+
+        // ----------------------------------------------------- MODULO NIVELES CALIDAD -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
 
 
 
+        private void buttonCargaDatosNivelesCalidad_Click(object sender, EventArgs e)
+        {
+            listViewNivelesCalidad.Items.Clear();
+            // carga los DatosNiveles otra vez (por si hay cambios)
+            SesionActual.getInstance().modNivCalidad.cargaNiveles();
+            foreach (NivelCalidad nivel in SesionActual.getInstance().modNivCalidad.listaNivelCalidad)
+            {
+                ListViewItem linea = new ListViewItem(nivel.idNivelCalidad.ToString());
+                linea.SubItems.Add(nivel.descripcion);
+                listViewNivelesCalidad.Items.Add(linea);
+            }
+        }
+
+        private void buttonbuttonAgregarNivelesCalidad_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NCAgregarNivelCalidad window = new NCAgregarNivelCalidad();
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonEditarNivelesCalidad_Click(object sender, EventArgs e)
+        {
+            int indexNivelCalidadListView = listViewNivelesCalidad.SelectedIndices[0];
+            MessageBox.Show("Index: " + listViewNivelesCalidad.ToString());
+
+            NivelCalidad tipo = SesionActual.getInstance().modNivCalidad.listaNivelCalidad[indexNivelCalidadListView];
+            MessageBox.Show("Nivel: " + tipo.idNivelCalidad);
+
+            // codigo template
+
+            this.Hide();
+            NCEditarNivelCalidad window = new NCEditarNivelCalidad(tipo);
+            window.ShowDialog();
+            this.Show();
+        }
     }
     
 }

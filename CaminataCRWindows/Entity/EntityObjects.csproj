@@ -43,8 +43,13 @@
     <Compile Include="Administrador.cs" />
     <Compile Include="Dificultad.cs" />
     <Compile Include="Hiker.cs" />
+    <Compile Include="NivelCalidad.cs" />
+    <Compile Include="NivelDificultad.cs" />
+    <Compile Include="NivelPrecio.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoCaminata.cs" />
+    <Compile Include="UsuarioConsulta.cs" />
     <Compile Include="UsuarioICT.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
