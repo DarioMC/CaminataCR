@@ -22,6 +22,9 @@ namespace BusinessLayer
             listaHikers = conexionSQL.getInstance().seleccionaHikers();
         }
 
-
+        public void inactivarHiker(Hiker user)
+        {
+            conexionSQL.getInstance().inactivarHiker(user);
+        }
     }
 }

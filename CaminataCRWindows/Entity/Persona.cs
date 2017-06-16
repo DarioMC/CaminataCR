@@ -16,5 +16,6 @@ namespace EntityObjects
         public string cedula;
         public string contrasena;
         public int IdPersona;
+        public int cuentaBancaria;
     }
 }

@@ -139,6 +139,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InicioSesion";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

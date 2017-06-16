@@ -484,6 +484,31 @@ namespace ConexionSQL
             }
         }
 
+        public void inactivarHiker(Hiker usuario)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_InactivarUsuarioRegular");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = usuario.alias;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.InactivarHiker()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
         // ------------------------------------------------------- MODULO NIVELES DIFICULTAD -------------------------------------------------------
         // ------------------------------------------------------- MODULO NIVELES DIFICULTAD -------------------------------------------------------
         // ------------------------------------------------------- MODULO NIVELES DIFICULTAD -------------------------------------------------------
@@ -578,6 +603,385 @@ namespace ConexionSQL
                 this.terminaConexionSO();
             }
         }
+
+        // ------------------------------------------------------- MODULO TIPOS CAMINATA -------------------------------------------------------
+        // ------------------------------------------------------- MODULO TIPOS CAMINATA -------------------------------------------------------
+        // ------------------------------------------------------- MODULO TIPOS CAMINATA -------------------------------------------------------
+
+        public List<TipoCaminata> seleccionaTiposCaminata()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarTiposCaminatas");
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<TipoCaminata> listaTipoCaminatas = new List<TipoCaminata>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    TipoCaminata tipoCaminata = new TipoCaminata();
+
+                    tipoCaminata.idTipo = (int)lectorsql["IdTipo"];
+                    tipoCaminata.descripcion = (string)lectorsql["Descripcion"];
+
+                    //agregar habilitado
+
+                    listaTipoCaminatas.Add(tipoCaminata);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaTipoCaminatas;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.seleccionaTipoCaminata()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+        public void editarTipoCaminata(TipoCaminata tipo)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_EditarTipoCaminata");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idPk", SqlDbType.Int).Value = tipo.idTipo;
+                comandosql.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = tipo.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.editarTipoCaminata()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void agregarTipoCaminata(TipoCaminata tipo)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_AgregarTipoCaminata");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@comentario", SqlDbType.VarChar).Value = tipo.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.AgregarTipoCaminata()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO NIVEL CALIDAD -------------------------------------------------------
+        // ------------------------------------------------------- MODULO NIVEL CALIDAD -------------------------------------------------------
+        // ------------------------------------------------------- MODULO NIVEL CALIDAD -------------------------------------------------------
+
+        public List<NivelCalidad> seleccionaNivelCalidad()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarNivelesCalidad");
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<NivelCalidad> listaTipoCaminatas = new List<NivelCalidad>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    NivelCalidad nivelCalidad = new NivelCalidad();
+
+                    nivelCalidad.idNivelCalidad = (int)lectorsql["IdNivelCalidad"];
+                    nivelCalidad.descripcion = (string)lectorsql["Descripcion"];
+                    nivelCalidad.habilitado = (Boolean)lectorsql["Habilitado"];
+
+                    //agregar habilitado
+
+                    listaTipoCaminatas.Add(nivelCalidad);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaTipoCaminatas;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.seleccionNivelCalidad()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void editarNivelCalidad(NivelCalidad nivel)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_EditarNivelesCalidad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idPk", SqlDbType.Int).Value = nivel.idNivelCalidad;
+                comandosql.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = nivel.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.editarNivelCalidad()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void agregarNivelCalidad(NivelCalidad nivel)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_AgregarNivelCalidad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@comentario", SqlDbType.VarChar).Value = nivel.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.agregarNivelCalidad()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO NIVEL PRECIO -------------------------------------------------------
+        // ------------------------------------------------------- MODULO NIVEL PRECIO -------------------------------------------------------
+        // ------------------------------------------------------- MODULO NIVEL PRECIO -------------------------------------------------------
+
+        public List<NivelPrecio> seleccionaNivelPrecio()
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarNivelesPrecio");
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<NivelPrecio> listaNivelPrecio = new List<NivelPrecio>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                while (lectorsql.Read())
+                {
+                    NivelPrecio nivel = new NivelPrecio();
+
+                    nivel.idNivelPrecio = (int)lectorsql["IdNivelPrecio"];
+                    nivel.descripcion = (string)lectorsql["Descripcion"];
+                    nivel.habilitado = (Boolean)lectorsql["Habilitado"];
+
+                    //agregar habilitado
+
+                    listaNivelPrecio.Add(nivel);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaNivelPrecio;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.seleccionNivelPrecio()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void editarNivelPrecio(NivelPrecio nivel)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_EditarNivelesPrecio");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idPk", SqlDbType.Int).Value = nivel.idNivelPrecio;
+                comandosql.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = nivel.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.editarNivelPrecio()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void agregarNivelPrecio(NivelPrecio nivel)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_AgregarNivelCalidad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@comentario", SqlDbType.VarChar).Value = nivel.descripcion;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.agregarNivelPrecio()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        // ------------------------------------------------------- MODULO CONSULTAS -------------------------------------------------------
+        // ------------------------------------------------------- MODULO CONSULTAS -------------------------------------------------------
+        // ------------------------------------------------------- MODULO CONSULTAS -------------------------------------------------------
+
+        public int loginICT(string alias, string contrasena)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_LoginUsuarioICT");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@alias", SqlDbType.VarChar).Value = alias;
+                comandosql.Parameters.Add("@contrasena", SqlDbType.VarChar).Value = contrasena;
+
+                // asocia el parametro de regreso
+                var returnParameter = comandosql.Parameters.Add("@conectado", SqlDbType.Int);
+                returnParameter.Direction = ParameterDirection.ReturnValue;
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+                var val = returnParameter.Value;
+                return (int)val;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.loginAdministrador()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public List<UsuarioConsulta> consultaUsuarios(string nombre="", string apellido="", int likes=0)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_ConsultaUsuarios");
+
+                comandosql.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+                comandosql.Parameters.Add("@apellido", SqlDbType.VarChar).Value = apellido;
+                comandosql.Parameters.Add("@cantLikes", SqlDbType.Int).Value = likes;
+
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<UsuarioConsulta> listaUsuarios = new List<UsuarioConsulta>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                // en este caso: PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, Imagen, CuentaBancaria, 
+                // Cantidad Caminatas, Puntos Geograficos, Likes
+                while (lectorsql.Read())
+                {
+                    UsuarioConsulta usuario = new UsuarioConsulta();
+
+                    usuario.primerNombre = (string)lectorsql["PrimerNombre"];
+                    usuario.primerApellido = (string)lectorsql["PrimerApellido"];
+                    usuario.segundoApellido = (string)lectorsql["SegundoApellido"];
+                    usuario.fechaNac = (DateTime)lectorsql["FechaNac"];
+                    usuario.alias = (string)lectorsql["Alias"];
+                    usuario.cedula = (string)lectorsql["Cedula"];
+                    usuario.cuentaBancaria = (int)lectorsql["CuentaBancaria"];
+                    usuario.cantidadCaminatas = (int)lectorsql["Cantidad Caminatas"];
+                    usuario.puntosGeograficos = (int)lectorsql["Puntos Geograficos"];
+                    usuario.cantidadLikes = (int)lectorsql["Likes"];
+
+                    //agregar habilitado
+
+                    listaUsuarios.Add(usuario);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaUsuarios;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.consultaUsuarios()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
 
         /*
         public void procedimientoEjemplo()
