@@ -1,14 +1,21 @@
-Use Caminata
-go
-CREATE PROCEDURE SPS_ConsultaUsuarios(
-@nombre VARCHAR(50) = null, @apellido VARCHAR(50) = null, @cantLikes INT = null
-)
-AS 
-BEGIN
-declare @true bit = 1
-declare @ExecStr NVARCHAR(MAX)
+USE [Caminata]
+GO
 
-select @ExecStr = N'PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, IH.Imagen, 
+/****** Object:  StoredProcedure [dbo].[SPS_ConsultaUsuarios]    Script Date: 15/6/2017 20:01:28: PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[SPS_ConsultaUsuarios](
+@nombre VARCHAR(50) = null, @apellido VARCHAR(50) = null, @cantLikes INT = null, @true BIT = 1
+)
+AS
+BEGIN
+declare @ExecStr NVARCHAR(MAX), @GB VARCHAR(2000) = N'group by PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, IH.Imagen, CuentaBancaria '
+
+SET @ExecStr = N'select PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, IH.Imagen, 
 		CuentaBancaria, Count(DISTINCT CH.IdCaminata) as "Cantidad Caminatas", Count(DISTINCT E.NSecuencia) as "Puntos Geograficos",
 		Count(DISTINCT L.IdLike) as Likes
 from Persona P 
@@ -22,16 +29,14 @@ where @true = 1 '
 	if (@nombre is not null)
 		SET @ExecStr = @ExecStr + ' and PrimerNombre like ''%''+@nombre+''%'' ' 
 	if (@apellido is not null)
-		SET @ExecStr = @ExecStr + ' and PrimerNombre like ''%''+@apellido+''%'' ' 
-	else 
-		SET @ExecStr = @ExecStr + 'group by PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, IH.Imagen, CuentaBancaria '
+		SET @ExecStr = @ExecStr + ' and PrimerApellido like ''%''+@apellido+''%'' '  
 	if(@cantLikes is not null)
-		SET @ExecStr = @ExecStr + 'Having Count(DISTINCT L.IdLike) >= @cantLikes'
-
-	declare @parametros NVARCHAR(2000)
-		SET @parametros = N'@nombre VARCHAR(50), @apellido VARCHAR(50), @cantLikes INT'
-
-		exec sp_executesql
-			@ExecStr, @parametros, @nombre,
-			@apellido, @cantLikes
+		SET @ExecStr = @ExecStr + @GB + N'Having Count(DISTINCT L.IdLike) >= @cantLikes'
+	Else
+		SET @ExecStr = @ExecStr + @GB
+		print @ExecStr
+		exec sp_executesql @ExecStr, N'@nombre VARCHAR(50), @apellido VARCHAR(50), @cantLikes INT, @true BIT', @nombre, @apellido, @cantLikes,@true
+		
 END
+GO
+
