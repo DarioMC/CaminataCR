@@ -32,5 +32,9 @@ namespace BusinessLayer
         {
             conexionSQL.getInstance().editarNivelCalidad(nivel);
         }
+        public void inactivarNivelCalidad(NivelCalidad nivel)
+        {
+            conexionSQL.getInstance().desactivarNivelCalidad(nivel);
+        }
     }
 }

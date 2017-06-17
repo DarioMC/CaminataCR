@@ -62,6 +62,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonCargarPuntos = new System.Windows.Forms.Button();
             this.dateTimePickerFechaInicialGustos = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -80,6 +81,8 @@
             this.columnHeaderLikesGustosRutas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderIdGustoRutas = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDireccionGusto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderLatitudGusto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderLongitudGusto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -294,7 +297,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(823, 461);
+            this.tabPage1.Size = new System.Drawing.Size(906, 450);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -528,7 +531,7 @@
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.08257F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.91743F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 402F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 404F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.listViewPuntosGustos, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.listViewCaminataLikesGustos, 1, 0);
@@ -546,6 +549,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.buttonCargarPuntos, 0, 8);
             this.tableLayoutPanel10.Controls.Add(this.dateTimePickerFechaInicialGustos, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.label5, 0, 2);
@@ -556,25 +560,42 @@
             this.tableLayoutPanel10.Controls.Add(this.checkBoxOrden, 0, 6);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 8;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(186, 432);
+            this.tableLayoutPanel10.RowCount = 9;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.80556F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.03704F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(185, 432);
             this.tableLayoutPanel10.TabIndex = 0;
+            // 
+            // buttonCargarPuntos
+            // 
+            this.buttonCargarPuntos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonCargarPuntos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCargarPuntos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCargarPuntos.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCargarPuntos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonCargarPuntos.Location = new System.Drawing.Point(0, 379);
+            this.buttonCargarPuntos.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonCargarPuntos.Name = "buttonCargarPuntos";
+            this.buttonCargarPuntos.Size = new System.Drawing.Size(185, 53);
+            this.buttonCargarPuntos.TabIndex = 9;
+            this.buttonCargarPuntos.Text = "Cargar Puntos";
+            this.buttonCargarPuntos.UseCompatibleTextRendering = true;
+            this.buttonCargarPuntos.UseVisualStyleBackColor = false;
+            this.buttonCargarPuntos.Click += new System.EventHandler(this.buttonCargarPuntos_Click);
             // 
             // dateTimePickerFechaInicialGustos
             // 
             this.dateTimePickerFechaInicialGustos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerFechaInicialGustos.Location = new System.Drawing.Point(3, 69);
+            this.dateTimePickerFechaInicialGustos.Location = new System.Drawing.Point(3, 60);
             this.dateTimePickerFechaInicialGustos.Name = "dateTimePickerFechaInicialGustos";
-            this.dateTimePickerFechaInicialGustos.Size = new System.Drawing.Size(180, 20);
+            this.dateTimePickerFechaInicialGustos.Size = new System.Drawing.Size(179, 20);
             this.dateTimePickerFechaInicialGustos.TabIndex = 7;
             // 
             // label4
@@ -582,7 +603,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 16);
+            this.label4.Location = new System.Drawing.Point(3, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 6;
@@ -594,7 +615,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 122);
+            this.label5.Location = new System.Drawing.Point(3, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 20);
             this.label5.TabIndex = 6;
@@ -606,7 +627,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 228);
+            this.label6.Location = new System.Drawing.Point(3, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(157, 20);
             this.label6.TabIndex = 6;
@@ -618,19 +639,19 @@
             this.textBoxNumeroRutasGustos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNumeroRutasGustos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(185)))), ((int)(((byte)(181)))));
             this.textBoxNumeroRutasGustos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxNumeroRutasGustos.Location = new System.Drawing.Point(4, 281);
+            this.textBoxNumeroRutasGustos.Location = new System.Drawing.Point(4, 248);
             this.textBoxNumeroRutasGustos.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNumeroRutasGustos.MinimumSize = new System.Drawing.Size(3, 3);
             this.textBoxNumeroRutasGustos.Name = "textBoxNumeroRutasGustos";
-            this.textBoxNumeroRutasGustos.Size = new System.Drawing.Size(178, 20);
+            this.textBoxNumeroRutasGustos.Size = new System.Drawing.Size(177, 20);
             this.textBoxNumeroRutasGustos.TabIndex = 5;
             // 
             // dateTimePickerFechaFinalGustos
             // 
             this.dateTimePickerFechaFinalGustos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerFechaFinalGustos.Location = new System.Drawing.Point(3, 175);
+            this.dateTimePickerFechaFinalGustos.Location = new System.Drawing.Point(3, 154);
             this.dateTimePickerFechaFinalGustos.Name = "dateTimePickerFechaFinalGustos";
-            this.dateTimePickerFechaFinalGustos.Size = new System.Drawing.Size(180, 20);
+            this.dateTimePickerFechaFinalGustos.Size = new System.Drawing.Size(179, 20);
             this.dateTimePickerFechaFinalGustos.TabIndex = 7;
             // 
             // buttonCargarGustosRutas
@@ -640,12 +661,12 @@
             this.buttonCargarGustosRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargarGustosRutas.Font = new System.Drawing.Font("Helvetica LT Std Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargarGustosRutas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargarGustosRutas.Location = new System.Drawing.Point(0, 371);
+            this.buttonCargarGustosRutas.Location = new System.Drawing.Point(0, 329);
             this.buttonCargarGustosRutas.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargarGustosRutas.Name = "buttonCargarGustosRutas";
-            this.buttonCargarGustosRutas.Size = new System.Drawing.Size(186, 61);
+            this.buttonCargarGustosRutas.Size = new System.Drawing.Size(185, 50);
             this.buttonCargarGustosRutas.TabIndex = 2;
-            this.buttonCargarGustosRutas.Text = "Cargar";
+            this.buttonCargarGustosRutas.Text = "Cargar Caminatas";
             this.buttonCargarGustosRutas.UseCompatibleTextRendering = true;
             this.buttonCargarGustosRutas.UseVisualStyleBackColor = false;
             this.buttonCargarGustosRutas.Click += new System.EventHandler(this.buttonCargarGustosRutas_Click);
@@ -654,7 +675,7 @@
             // 
             this.checkBoxOrden.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxOrden.AutoSize = true;
-            this.checkBoxOrden.Location = new System.Drawing.Point(46, 336);
+            this.checkBoxOrden.Location = new System.Drawing.Point(45, 297);
             this.checkBoxOrden.Name = "checkBoxOrden";
             this.checkBoxOrden.Size = new System.Drawing.Size(94, 17);
             this.checkBoxOrden.TabIndex = 8;
@@ -678,10 +699,10 @@
             this.listViewPuntosGustos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewPuntosGustos.FullRowSelect = true;
             this.listViewPuntosGustos.GridLines = true;
-            this.listViewPuntosGustos.Location = new System.Drawing.Point(494, 3);
+            this.listViewPuntosGustos.Location = new System.Drawing.Point(492, 3);
             this.listViewPuntosGustos.MultiSelect = false;
             this.listViewPuntosGustos.Name = "listViewPuntosGustos";
-            this.listViewPuntosGustos.Size = new System.Drawing.Size(397, 432);
+            this.listViewPuntosGustos.Size = new System.Drawing.Size(399, 432);
             this.listViewPuntosGustos.TabIndex = 1;
             this.listViewPuntosGustos.UseCompatibleStateImageBehavior = false;
             this.listViewPuntosGustos.View = System.Windows.Forms.View.Details;
@@ -719,15 +740,17 @@
             this.columnHeaderNombreGustosRutas,
             this.columnHeaderLikesGustosRutas,
             this.columnHeaderIdGustoRutas,
-            this.columnHeaderDireccionGusto});
+            this.columnHeaderDireccionGusto,
+            this.columnHeaderLatitudGusto,
+            this.columnHeaderLongitudGusto});
             this.listViewCaminataLikesGustos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewCaminataLikesGustos.FullRowSelect = true;
             this.listViewCaminataLikesGustos.GridLines = true;
             this.listViewCaminataLikesGustos.HideSelection = false;
-            this.listViewCaminataLikesGustos.Location = new System.Drawing.Point(195, 3);
+            this.listViewCaminataLikesGustos.Location = new System.Drawing.Point(194, 3);
             this.listViewCaminataLikesGustos.MultiSelect = false;
             this.listViewCaminataLikesGustos.Name = "listViewCaminataLikesGustos";
-            this.listViewCaminataLikesGustos.Size = new System.Drawing.Size(293, 432);
+            this.listViewCaminataLikesGustos.Size = new System.Drawing.Size(292, 432);
             this.listViewCaminataLikesGustos.TabIndex = 1;
             this.listViewCaminataLikesGustos.UseCompatibleStateImageBehavior = false;
             this.listViewCaminataLikesGustos.View = System.Windows.Forms.View.Details;
@@ -752,12 +775,20 @@
             // 
             this.columnHeaderDireccionGusto.Text = "Direccion";
             // 
+            // columnHeaderLatitudGusto
+            // 
+            this.columnHeaderLatitudGusto.Text = "Latitud";
+            // 
+            // columnHeaderLongitudGusto
+            // 
+            this.columnHeaderLongitudGusto.Text = "Longitud";
+            // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(823, 461);
+            this.tabPage3.Size = new System.Drawing.Size(906, 450);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -768,7 +799,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(823, 461);
+            this.tabPage4.Size = new System.Drawing.Size(906, 450);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1037,7 +1068,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNumeroRutasGustos;
-        private System.Windows.Forms.Button buttonCargarGustosRutas;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFinalGustos;
         private System.Windows.Forms.ListView listViewPuntosGustos;
         private System.Windows.Forms.ColumnHeader columnHeaderPuntoReportado;
@@ -1050,5 +1080,9 @@
         private System.Windows.Forms.ColumnHeader columnHeaderIdGustoRutas;
         private System.Windows.Forms.CheckBox checkBoxOrden;
         private System.Windows.Forms.ColumnHeader columnHeaderDireccionGusto;
+        private System.Windows.Forms.Button buttonCargarPuntos;
+        private System.Windows.Forms.Button buttonCargarGustosRutas;
+        private System.Windows.Forms.ColumnHeader columnHeaderLatitudGusto;
+        private System.Windows.Forms.ColumnHeader columnHeaderLongitudGusto;
     }
 }

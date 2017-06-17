@@ -532,6 +532,7 @@ namespace ConexionSQL
 
                     dificultad.idNivel = (int)lectorsql["Nivel"];
                     dificultad.descripcion = (string)lectorsql["Descripcion"];
+                    dificultad.habilitado = (bool)lectorsql["Habilitado"];
 
                     //agregar habilitado
 
@@ -578,6 +579,33 @@ namespace ConexionSQL
                 this.terminaConexionSO();
             }
         }
+
+        public void desactivarNivelDificultad(Dificultad dificultad)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_DesactivarNivelesDificultad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idDificultad", SqlDbType.Int).Value = dificultad.idNivel;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.desactivarNivelDificultad()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
         public void agregarNivelDificultad(Dificultad dificultad)
         {
             try
@@ -665,6 +693,32 @@ namespace ConexionSQL
                 throw new Exception(e.ToString());
                 MessageBox.Show("Error: " + e);
                 throw new Exception("Ocurrio un error conexion.SQL.editarTipoCaminata()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void desactivarTipoCaminata(TipoCaminata tipo)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_DesactivarTipoCaminata");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idCaminata", SqlDbType.Int).Value = tipo.idTipo;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.desactivarTipoCaminata()");
             }
             // terminar la conexion despues de manejar los datos de la tabla
             finally
@@ -796,6 +850,33 @@ namespace ConexionSQL
             }
         }
 
+
+        public void desactivarNivelCalidad(NivelCalidad nivel)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_DesactivarNivelesCalidad");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idCalidad", SqlDbType.Int).Value = nivel.idNivelCalidad;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.desacativarNivelCalidad()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
         // ------------------------------------------------------- MODULO NIVEL PRECIO -------------------------------------------------------
         // ------------------------------------------------------- MODULO NIVEL PRECIO -------------------------------------------------------
         // ------------------------------------------------------- MODULO NIVEL PRECIO -------------------------------------------------------
@@ -859,6 +940,32 @@ namespace ConexionSQL
                 throw new Exception(e.ToString());
                 MessageBox.Show("Error: " + e);
                 throw new Exception("Ocurrio un error conexion.SQL.editarNivelPrecio()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
+        public void desactivarNivelPrecio(NivelPrecio nivel)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_DesactivarNivelesPrecio");
+
+                //agregar parametros
+                comandosql.Parameters.Add("@idPk", SqlDbType.Int).Value = nivel.idNivelPrecio;
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.ToString());
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.desactivarNivelPrecio()");
             }
             // terminar la conexion despues de manejar los datos de la tabla
             finally
@@ -1073,10 +1180,14 @@ namespace ConexionSQL
                     caminata.nombre = (string)lectorsql["Nombre"];
                     caminata.likes = (int)lectorsql["Likes"];
                     caminata.idCaminata = (int)lectorsql["IdCaminata"];
+                    caminata.direccion = (string)lectorsql["Direccion"];
+                    caminata.latitud = (double)lectorsql["Latitud"];
+                    caminata.longitud = (double)lectorsql["Longitud"];
+                    //caminata.foto = (byte[])lectorsql["Imagen"];
 
-                    //agregar habilitado
+        //agregar habilitado
 
-                    listaCaminata.Add(caminata);
+        listaCaminata.Add(caminata);
                     //lista.Add(mesa); // se agregar elemento a la lista que se retornara
                 }
                 return listaCaminata;
@@ -1139,7 +1250,60 @@ namespace ConexionSQL
                 this.terminaConexionSO();
             }
         }
+        // ------------------------------------------------------- MODULO BITACORA -------------------------------------------------------
 
+        public List<EntradaBitacora> seleccionarBitacora(DateTime fechaInicio, DateTime fechaFinal, string tipoAccion, string objeto, int horaInicial, int horaFinal)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_SeleccionarBitacora");
+
+                comandosql.Parameters.Add("@fechaInicio", SqlDbType.DateTime).Value = fechaInicio;
+                comandosql.Parameters.Add("@fechaFinal", SqlDbType.DateTime).Value = fechaFinal;
+                comandosql.Parameters.Add("@tipoAccion", SqlDbType.VarChar).Value = tipoAccion;
+                comandosql.Parameters.Add("@objeto", SqlDbType.VarChar).Value = objeto;
+                comandosql.Parameters.Add("@horaInicial", SqlDbType.Int).Value = horaInicial;
+                comandosql.Parameters.Add("@horaFinal", SqlDbType.Int).Value = horaFinal;
+
+
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<EntradaBitacora> listaCaminata = new List<EntradaBitacora>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                // en este caso: PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, Imagen, CuentaBancaria, 
+                // Cantidad Caminatas, Puntos Geograficos, Likes
+                while (lectorsql.Read())
+                {
+                    EntradaBitacora punto = new EntradaBitacora();
+
+                    punto.fecha = (DateTime)lectorsql["FechaHora"];
+                    punto.tipoAccion = (string)lectorsql["TipoAccion"];
+                    punto.objeto = (string)lectorsql["Objeto"];
+                    punto.descripcion = (string)lectorsql["Descripcion"];
+                    //punto.foto = (byte[])lectorsql["Imagen evento"];
+
+                    //agregar habilitado
+
+                    listaCaminata.Add(punto);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaCaminata;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.consultaUsuarios()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
 
         /*
         public void procedimientoEjemplo()

@@ -596,9 +596,12 @@ namespace BackOfficeICT
                 //List<CaminataLikes> listaOrdenada = listaUsuarios.OrderBy(o => o.alias).ToList();
                 foreach (CaminataLikes caminata in listaCaminataLikes)
                 {
-                    ListViewItem linea = new ListViewItem(caminata.idCaminata.ToString());
-                    linea.SubItems.Add(caminata.nombre);
+                    ListViewItem linea = new ListViewItem(caminata.nombre);
                     linea.SubItems.Add(caminata.likes.ToString());
+                    linea.SubItems.Add(caminata.idCaminata.ToString());
+                    linea.SubItems.Add(caminata.direccion);
+                    linea.SubItems.Add(caminata.latitud.ToString());
+                    linea.SubItems.Add(caminata.longitud.ToString());
 
                     listViewCaminataLikesGustos.Items.Add(linea);
                 }
@@ -611,13 +614,23 @@ namespace BackOfficeICT
 
         private void listViewCaminataLikesGustos_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void PanelControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCargarPuntos_Click(object sender, EventArgs e)
+        {
             listViewPuntosGustos.Items.Clear();
 
             int indexCaminataLikesListview = listViewCaminataLikesGustos.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexCaminataLikesListview.ToString());
+            //MessageBox.Show("Index: " + indexCaminataLikesListview.ToString());
 
             CaminataLikes caminata = listaCaminataLikes[indexCaminataLikesListview];
-            MessageBox.Show("Usuario: " + caminata.nombre);
+            //MessageBox.Show("Usuario: " + caminata.nombre);
 
             List<Puntos> listaPuntos = conexionSQL.getInstance().consultaRutasCaminata(caminata.idCaminata);
             foreach (Puntos punto in listaPuntos)
@@ -629,11 +642,6 @@ namespace BackOfficeICT
 
                 listViewPuntosGustos.Items.Add(linea);
             }
-        }
-
-        private void PanelControl_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

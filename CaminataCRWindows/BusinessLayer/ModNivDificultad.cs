@@ -31,5 +31,10 @@ namespace BusinessLayer
         {
             conexionSQL.getInstance().agregarNivelDificultad(nivel);
         }
+
+        public void inactivarDificultad(Dificultad nivel)
+        {
+            conexionSQL.getInstance().desactivarNivelDificultad(nivel);
+        }
     }
 }
