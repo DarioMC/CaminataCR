@@ -35,7 +35,6 @@
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxContrasena = new System.Windows.Forms.TextBox();
-            this.buttonProbar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +54,6 @@
             this.tableLayoutPanel1.Controls.Add(this.textBoxUsuario, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBoxContrasena, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.buttonProbar, 2, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -150,20 +148,6 @@
             this.textBoxContrasena.TabIndex = 1;
             this.textBoxContrasena.TextChanged += new System.EventHandler(this.textBoxContrasena_TextChanged);
             // 
-            // buttonProbar
-            // 
-            this.buttonProbar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonProbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
-            this.buttonProbar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProbar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProbar.Location = new System.Drawing.Point(227, 158);
-            this.buttonProbar.Name = "buttonProbar";
-            this.buttonProbar.Size = new System.Drawing.Size(55, 27);
-            this.buttonProbar.TabIndex = 0;
-            this.buttonProbar.Text = "Test";
-            this.buttonProbar.UseVisualStyleBackColor = false;
-            this.buttonProbar.Click += new System.EventHandler(this.buttonProbar_Click);
-            // 
             // InicioSesion
             // 
             this.AcceptButton = this.buttonInicioSesion;
@@ -190,7 +174,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxContrasena;
         private System.Windows.Forms.LinkLabel linkLabelRegistrarNuevoUsuario;
-        private System.Windows.Forms.Button buttonProbar;
     }
 }
 

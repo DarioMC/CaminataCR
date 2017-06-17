@@ -60,6 +60,7 @@ namespace AdminPlataforma
             }
             catch(Exception ex)
             {
+                MessageBox.Show("Datos ingresados son invalidos");
                 MessageBox.Show(ex.ToString());
             }
 
