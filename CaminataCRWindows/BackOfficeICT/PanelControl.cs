@@ -643,5 +643,37 @@ namespace BackOfficeICT
                 listViewPuntosGustos.Items.Add(linea);
             }
         }
+
+        private void tableLayoutPanel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFiltrarClasificacionRutas_Click(object sender, EventArgs e)
+        {
+            listViewClasificacionRutas.Items.Clear();
+            bool calidad = checkBoxNivelCalidad.Checked;
+            bool tipo = checkBoxTipo.Checked;
+            bool dificultad = checkBoxNivelDificultad.Checked;
+            bool precio = checkBoxNivelPrecio.Checked;
+            DateTime fechaInicio = dateTimePickerFechaInicioClasifRutas.Value;
+            DateTime fechaFinal = dateTimePickerFechaFinalClasfRutas.Value;
+
+            List<ClasificacionRuta> seleccionarClasificacionRuta =
+                conexionSQL.getInstance().seleccionarClasificacionRutas(calidad, tipo, dificultad, precio, fechaInicio, fechaFinal);
+            foreach (ClasificacionRuta clasificacion in seleccionarClasificacionRuta)
+            {
+                ListViewItem linea = new ListViewItem(clasificacion.cantidadCaminatas.ToString());
+                linea.SubItems.Add(clasificacion.cantidadLikes.ToString());
+                linea.SubItems.Add(clasificacion.cantidadPuntos.ToString());
+
+                listViewClasificacionRutas.Items.Add(linea);
+            }
+        }
     }
 }

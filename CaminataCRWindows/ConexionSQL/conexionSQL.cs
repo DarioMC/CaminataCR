@@ -1185,9 +1185,9 @@ namespace ConexionSQL
                     caminata.longitud = (double)lectorsql["Longitud"];
                     //caminata.foto = (byte[])lectorsql["Imagen"];
 
-        //agregar habilitado
+                    //agregar habilitado
 
-        listaCaminata.Add(caminata);
+                    listaCaminata.Add(caminata);
                     //lista.Add(mesa); // se agregar elemento a la lista que se retornara
                 }
                 return listaCaminata;
@@ -1250,6 +1250,65 @@ namespace ConexionSQL
                 this.terminaConexionSO();
             }
         }
+
+        public List<ClasificacionRuta> seleccionarClasificacionRutas(bool calidad, bool tipo, bool dificultad, bool precio, DateTime fechaInicio, DateTime fechaFinal)
+        {
+            try
+            {
+                this.abrirConexionSP("SPS_ClasificacionRutas");
+
+                //	@calidad BIT = null, @tipo Bit = null, @dificultad BIT = null,
+                //@precio BIT = null,
+                //@fecha1 datetime,
+                //@fecha2 datetime
+
+                comandosql.Parameters.Add("@calidad", SqlDbType.Bit).Value = calidad;
+                comandosql.Parameters.Add("@tipo", SqlDbType.Bit).Value = tipo;
+                comandosql.Parameters.Add("@dificultad", SqlDbType.Bit).Value = dificultad;
+                comandosql.Parameters.Add("@precio", SqlDbType.Bit).Value = precio;
+                comandosql.Parameters.Add("@fecha1", SqlDbType.DateTime).Value = fechaInicio;
+                comandosql.Parameters.Add("@fecha2", SqlDbType.DateTime).Value = fechaFinal;
+
+
+
+
+                // ejecuta el query y lo guarda en un objeto SqlDataReader llamado lectorsql
+                lectorsql = comandosql.ExecuteReader();
+                Console.WriteLine("Ejecutado Correctamente");
+
+                List<ClasificacionRuta> listaClasificaciones = new List<ClasificacionRuta>();
+
+                // se lee cada tupla de la tabla retornada una por una, .Read() retorna true cada tupla retornada y false si ya termino
+                // en este caso: PrimerNombre, PrimerApellido, SegundoApellido, FechaNac, Alias, Cedula, Imagen, CuentaBancaria, 
+                // Cantidad Caminatas, Puntos Geograficos, Likes
+                while (lectorsql.Read())
+                {
+                    ClasificacionRuta clasificacion = new ClasificacionRuta();
+
+                    clasificacion.cantidadCaminatas = (int)lectorsql["Cantidad Caminatas"];
+                    clasificacion.cantidadLikes = (int)lectorsql["Cantidad Likes"];
+                    clasificacion.cantidadPuntos = (int)lectorsql["Cantidad Puntos"];
+                    //punto.foto = (byte[])lectorsql["Imagen evento"];
+
+                    //agregar habilitado
+
+                    listaClasificaciones.Add(clasificacion);
+                    //lista.Add(mesa); // se agregar elemento a la lista que se retornara
+                }
+                return listaClasificaciones;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+                throw new Exception("Ocurrio un error conexion.SQL.SPS_ClasificacionRutas()");
+            }
+            // terminar la conexion despues de manejar los datos de la tabla
+            finally
+            {
+                this.terminaConexionSO();
+            }
+        }
+
         // ------------------------------------------------------- MODULO BITACORA -------------------------------------------------------
 
         public List<EntradaBitacora> seleccionarBitacora(DateTime fechaInicio, DateTime fechaFinal, string tipoAccion, string objeto, int horaInicial, int horaFinal)
@@ -1304,6 +1363,8 @@ namespace ConexionSQL
                 this.terminaConexionSO();
             }
         }
+
+        
 
         /*
         public void procedimientoEjemplo()
