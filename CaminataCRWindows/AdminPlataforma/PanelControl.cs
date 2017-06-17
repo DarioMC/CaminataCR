@@ -218,11 +218,21 @@ namespace AdminPlataforma
 
         private void buttonEliminarUsuariosICT_Click(object sender, EventArgs e)
         {
-            int index = listViewUsuariosICT.SelectedIndices[0];
+            try
+            {
+                int index = listViewUsuariosICT.SelectedIndices[0];
 
-            UsuarioICT usuario = SesionActual.getInstance().modUsuariosICT.listaUsuarios[index];
-            SesionActual.getInstance().modUsuariosICT.listaUsuarios.RemoveAt(index);
-            SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
+                UsuarioICT usuario = SesionActual.getInstance().modUsuariosICT.listaUsuarios[index];
+                SesionActual.getInstance().modUsuariosICT.listaUsuarios.RemoveAt(index);
+                SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
+                MessageBox.Show("Usuario Borrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se borro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
 
@@ -254,6 +264,7 @@ namespace AdminPlataforma
         private void buttonCargaDatosNivelesDificultad_Click(object sender, EventArgs e)
         {
             listViewNivelesDificultad.Items.Clear();
+            SesionActual.getInstance().modNivDificultad.cargaNiveles();
             foreach (Dificultad dificultad in SesionActual.getInstance().modNivDificultad.listaDificultades)
             {
                 ListViewItem linea = new ListViewItem(dificultad.idNivel.ToString());

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("cosas");
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonTab6 = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             this.listViewUsuariosRegulares = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
@@ -89,6 +90,7 @@
             this.listViewNivelesDificultad = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,6 +103,7 @@
             this.listViewTipoCaminata = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -113,6 +116,7 @@
             this.listViewNivelesPrecio = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -125,13 +129,9 @@
             this.listViewNivelesCalidad = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonBitacora = new System.Windows.Forms.Button();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -508,6 +508,7 @@
             this.buttonDesactivarAdmins.Text = "Desactivar";
             this.buttonDesactivarAdmins.UseCompatibleTextRendering = true;
             this.buttonDesactivarAdmins.UseVisualStyleBackColor = false;
+            this.buttonDesactivarAdmins.Visible = false;
             this.buttonDesactivarAdmins.Click += new System.EventHandler(this.buttonDesactivarAdmins_Click);
             // 
             // listViewUsuariosAdministradores
@@ -523,7 +524,7 @@
             this.listViewUsuariosAdministradores.FullRowSelect = true;
             this.listViewUsuariosAdministradores.GridLines = true;
             this.listViewUsuariosAdministradores.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem12});
             this.listViewUsuariosAdministradores.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosAdministradores.MultiSelect = false;
             this.listViewUsuariosAdministradores.Name = "listViewUsuariosAdministradores";
@@ -688,7 +689,7 @@
             this.listViewUsuariosICT.FullRowSelect = true;
             this.listViewUsuariosICT.GridLines = true;
             this.listViewUsuariosICT.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem13});
             this.listViewUsuariosICT.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosICT.Name = "listViewUsuariosICT";
             this.listViewUsuariosICT.Size = new System.Drawing.Size(646, 351);
@@ -800,7 +801,7 @@
             this.listViewUsuariosRegulares.FullRowSelect = true;
             this.listViewUsuariosRegulares.GridLines = true;
             this.listViewUsuariosRegulares.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem14});
             this.listViewUsuariosRegulares.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosRegulares.Name = "listViewUsuariosRegulares";
             this.listViewUsuariosRegulares.Size = new System.Drawing.Size(652, 356);
@@ -817,6 +818,11 @@
             // 
             this.columnHeader4.Text = "Usuario";
             this.columnHeader4.Width = 191;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Habilitado";
+            this.columnHeader17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -944,6 +950,7 @@
             this.buttonEliminarNivelDificultad.Text = "Eliminar";
             this.buttonEliminarNivelDificultad.UseCompatibleTextRendering = true;
             this.buttonEliminarNivelDificultad.UseVisualStyleBackColor = false;
+            this.buttonEliminarNivelDificultad.Visible = false;
             this.buttonEliminarNivelDificultad.Click += new System.EventHandler(this.buttonEliminarNivelDificultad_Click);
             // 
             // buttonDesactivarNivelDificultad
@@ -958,7 +965,7 @@
             this.buttonDesactivarNivelDificultad.Name = "buttonDesactivarNivelDificultad";
             this.buttonDesactivarNivelDificultad.Size = new System.Drawing.Size(124, 55);
             this.buttonDesactivarNivelDificultad.TabIndex = 2;
-            this.buttonDesactivarNivelDificultad.Text = "Desactivar(no sirve)";
+            this.buttonDesactivarNivelDificultad.Text = "Desactivar";
             this.buttonDesactivarNivelDificultad.UseCompatibleTextRendering = true;
             this.buttonDesactivarNivelDificultad.UseVisualStyleBackColor = false;
             this.buttonDesactivarNivelDificultad.Click += new System.EventHandler(this.buttonDesactivarNivelDificultad_Click);
@@ -979,7 +986,7 @@
             this.listViewNivelesDificultad.FullRowSelect = true;
             this.listViewNivelesDificultad.GridLines = true;
             this.listViewNivelesDificultad.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem8});
             this.listViewNivelesDificultad.Location = new System.Drawing.Point(3, 3);
             this.listViewNivelesDificultad.Name = "listViewNivelesDificultad";
             this.listViewNivelesDificultad.Size = new System.Drawing.Size(646, 351);
@@ -996,6 +1003,11 @@
             // 
             this.columnHeader6.Text = "Descripcion";
             this.columnHeader6.Width = 191;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Habilitado";
+            this.columnHeader13.Width = 94;
             // 
             // label4
             // 
@@ -1123,6 +1135,7 @@
             this.button15.Text = "Eliminar (no sirve)";
             this.button15.UseCompatibleTextRendering = true;
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Visible = false;
             // 
             // buttonDesactivarTipoCaminata
             // 
@@ -1155,7 +1168,7 @@
             this.listViewTipoCaminata.FullRowSelect = true;
             this.listViewTipoCaminata.GridLines = true;
             this.listViewTipoCaminata.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem9});
             this.listViewTipoCaminata.Location = new System.Drawing.Point(3, 3);
             this.listViewTipoCaminata.Name = "listViewTipoCaminata";
             this.listViewTipoCaminata.Size = new System.Drawing.Size(646, 351);
@@ -1172,6 +1185,10 @@
             // 
             this.columnHeader8.Text = "Descripcion";
             this.columnHeader8.Width = 191;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Habilitado";
             // 
             // label5
             // 
@@ -1299,6 +1316,7 @@
             this.button20.Text = "Eliminar  (no funciona)";
             this.button20.UseCompatibleTextRendering = true;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Visible = false;
             // 
             // buttonDesactivarNivelesPrecio
             // 
@@ -1331,7 +1349,7 @@
             this.listViewNivelesPrecio.FullRowSelect = true;
             this.listViewNivelesPrecio.GridLines = true;
             this.listViewNivelesPrecio.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
+            listViewItem10});
             this.listViewNivelesPrecio.Location = new System.Drawing.Point(3, 3);
             this.listViewNivelesPrecio.Name = "listViewNivelesPrecio";
             this.listViewNivelesPrecio.Size = new System.Drawing.Size(646, 351);
@@ -1348,6 +1366,10 @@
             // 
             this.columnHeader10.Text = "Descripcion";
             this.columnHeader10.Width = 191;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Habilitado";
             // 
             // label6
             // 
@@ -1475,6 +1497,7 @@
             this.buttonEliminarNivelesCalidad.Text = "Eliminar (no funciona)";
             this.buttonEliminarNivelesCalidad.UseCompatibleTextRendering = true;
             this.buttonEliminarNivelesCalidad.UseVisualStyleBackColor = false;
+            this.buttonEliminarNivelesCalidad.Visible = false;
             // 
             // buttonDesactivarNivelesCalidad
             // 
@@ -1507,7 +1530,7 @@
             this.listViewNivelesCalidad.FullRowSelect = true;
             this.listViewNivelesCalidad.GridLines = true;
             this.listViewNivelesCalidad.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7});
+            listViewItem11});
             this.listViewNivelesCalidad.Location = new System.Drawing.Point(3, 3);
             this.listViewNivelesCalidad.Name = "listViewNivelesCalidad";
             this.listViewNivelesCalidad.Size = new System.Drawing.Size(646, 351);
@@ -1524,6 +1547,10 @@
             // 
             this.columnHeader12.Text = "Descripcion";
             this.columnHeader12.Width = 191;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Habilitado";
             // 
             // label7
             // 
@@ -1550,28 +1577,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.05882F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(666, 68);
             this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Habilitado";
-            this.columnHeader13.Width = 94;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Habilitado";
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Habilitado";
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Habilitado";
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Habilitado";
-            this.columnHeader17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonBitacora
             // 

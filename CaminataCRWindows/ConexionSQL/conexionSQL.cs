@@ -466,7 +466,8 @@ namespace ConexionSQL
                     hiker.cedula = (string)lectorsql["Cedula"];
                     hiker.IdPersona = (int)lectorsql["IdPersona"];
                     hiker.cuentaBancaria = (int)lectorsql["CuentaBancaria"];
-
+                    hiker.habilitado = (bool)lectorsql["Habilitado"];
+                
                     listaHikers.Add(hiker);
                     //lista.Add(mesa); // se agregar elemento a la lista que se retornara
                 }
