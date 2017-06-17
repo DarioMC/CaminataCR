@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("cosas");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("cosas");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("cosas");
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonTab6 = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             this.listViewUsuariosRegulares = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
@@ -85,10 +86,11 @@
             this.buttonAgregarNivelesDificultad = new System.Windows.Forms.Button();
             this.buttonEditarNivelesDificultad = new System.Windows.Forms.Button();
             this.buttonEliminarNivelDificultad = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.buttonDesactivarNivelDificultad = new System.Windows.Forms.Button();
             this.listViewNivelesDificultad = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
@@ -97,10 +99,11 @@
             this.buttonAgregarTipoCaminata = new System.Windows.Forms.Button();
             this.buttonEditarTipoCaminata = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.buttonDesactivarTipoCaminata = new System.Windows.Forms.Button();
             this.listViewTipoCaminata = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -109,10 +112,11 @@
             this.buttonAgregaNivelesPrecio = new System.Windows.Forms.Button();
             this.buttonEditaNivelesPrecio = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.buttonDesactivarNivelesPrecio = new System.Windows.Forms.Button();
             this.listViewNivelesPrecio = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -125,10 +129,10 @@
             this.listViewNivelesCalidad = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelCloseButton = new System.Windows.Forms.Label();
-            this.labelMinimiza = new System.Windows.Forms.Label();
+            this.buttonBitacora = new System.Windows.Forms.Button();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -174,7 +178,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.56932F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.43069F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(852, 541);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(871, 541);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -202,7 +206,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(201, 473);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(205, 473);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // buttonTab6
@@ -215,7 +219,7 @@
             this.buttonTab6.Location = new System.Drawing.Point(0, 402);
             this.buttonTab6.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab6.Name = "buttonTab6";
-            this.buttonTab6.Size = new System.Drawing.Size(201, 71);
+            this.buttonTab6.Size = new System.Drawing.Size(205, 71);
             this.buttonTab6.TabIndex = 5;
             this.buttonTab6.Text = "Niveles de calidad";
             this.buttonTab6.UseCompatibleTextRendering = true;
@@ -232,7 +236,7 @@
             this.buttonTab4.Location = new System.Drawing.Point(0, 268);
             this.buttonTab4.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab4.Name = "buttonTab4";
-            this.buttonTab4.Size = new System.Drawing.Size(201, 67);
+            this.buttonTab4.Size = new System.Drawing.Size(205, 67);
             this.buttonTab4.TabIndex = 4;
             this.buttonTab4.Text = "Tipo de caminata";
             this.buttonTab4.UseCompatibleTextRendering = true;
@@ -249,7 +253,7 @@
             this.buttonTab3.Location = new System.Drawing.Point(0, 201);
             this.buttonTab3.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab3.Name = "buttonTab3";
-            this.buttonTab3.Size = new System.Drawing.Size(201, 67);
+            this.buttonTab3.Size = new System.Drawing.Size(205, 67);
             this.buttonTab3.TabIndex = 3;
             this.buttonTab3.Text = "Niveles de dificultad";
             this.buttonTab3.UseCompatibleTextRendering = true;
@@ -266,7 +270,7 @@
             this.buttonTab1.Location = new System.Drawing.Point(0, 67);
             this.buttonTab1.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab1.Name = "buttonTab1";
-            this.buttonTab1.Size = new System.Drawing.Size(201, 67);
+            this.buttonTab1.Size = new System.Drawing.Size(205, 67);
             this.buttonTab1.TabIndex = 2;
             this.buttonTab1.Text = "Usuarios ICT";
             this.buttonTab1.UseCompatibleTextRendering = true;
@@ -283,7 +287,7 @@
             this.buttonTab0.Location = new System.Drawing.Point(0, 0);
             this.buttonTab0.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab0.Name = "buttonTab0";
-            this.buttonTab0.Size = new System.Drawing.Size(201, 67);
+            this.buttonTab0.Size = new System.Drawing.Size(205, 67);
             this.buttonTab0.TabIndex = 1;
             this.buttonTab0.Text = "Usuarios administradores";
             this.buttonTab0.UseCompatibleTextRendering = true;
@@ -300,7 +304,7 @@
             this.buttonTab2.Location = new System.Drawing.Point(0, 134);
             this.buttonTab2.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab2.Name = "buttonTab2";
-            this.buttonTab2.Size = new System.Drawing.Size(201, 67);
+            this.buttonTab2.Size = new System.Drawing.Size(205, 67);
             this.buttonTab2.TabIndex = 0;
             this.buttonTab2.Text = "Usuarios regulares";
             this.buttonTab2.UseCompatibleTextRendering = true;
@@ -317,7 +321,7 @@
             this.buttonTab5.Location = new System.Drawing.Point(0, 335);
             this.buttonTab5.Margin = new System.Windows.Forms.Padding(0);
             this.buttonTab5.Name = "buttonTab5";
-            this.buttonTab5.Size = new System.Drawing.Size(201, 67);
+            this.buttonTab5.Size = new System.Drawing.Size(205, 67);
             this.buttonTab5.TabIndex = 5;
             this.buttonTab5.Text = "Niveles de precio";
             this.buttonTab5.UseCompatibleTextRendering = true;
@@ -336,7 +340,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(201, 68);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(205, 68);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label8
@@ -345,7 +349,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(22, 14);
+            this.label8.Location = new System.Drawing.Point(24, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(157, 40);
             this.label8.TabIndex = 2;
@@ -363,12 +367,12 @@
             this.tabControlPaginas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPaginas.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabControlPaginas.ItemSize = new System.Drawing.Size(20, 20);
-            this.tabControlPaginas.Location = new System.Drawing.Point(201, 68);
+            this.tabControlPaginas.Location = new System.Drawing.Point(205, 68);
             this.tabControlPaginas.Margin = new System.Windows.Forms.Padding(0);
             this.tabControlPaginas.Name = "tabControlPaginas";
             this.tabControlPaginas.Padding = new System.Drawing.Point(0, 0);
             this.tabControlPaginas.SelectedIndex = 0;
-            this.tabControlPaginas.Size = new System.Drawing.Size(651, 473);
+            this.tabControlPaginas.Size = new System.Drawing.Size(666, 473);
             this.tabControlPaginas.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlPaginas.TabIndex = 2;
             // 
@@ -379,7 +383,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 445);
+            this.tabPage1.Size = new System.Drawing.Size(658, 445);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -395,7 +399,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(637, 439);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(652, 439);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -418,7 +422,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(631, 76);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(646, 76);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // buttonCargaDatosUA
@@ -428,7 +432,7 @@
             this.buttonCargaDatosUA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosUA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosUA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosUA.Location = new System.Drawing.Point(1, 10);
+            this.buttonCargaDatosUA.Location = new System.Drawing.Point(2, 10);
             this.buttonCargaDatosUA.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosUA.Name = "buttonCargaDatosUA";
             this.buttonCargaDatosUA.Size = new System.Drawing.Size(124, 55);
@@ -445,7 +449,7 @@
             this.buttonAgregarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregarAdmins.Location = new System.Drawing.Point(127, 10);
+            this.buttonAgregarAdmins.Location = new System.Drawing.Point(131, 10);
             this.buttonAgregarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAgregarAdmins.Name = "buttonAgregarAdmins";
             this.buttonAgregarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -462,7 +466,7 @@
             this.buttonEditarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarAdmins.Location = new System.Drawing.Point(253, 10);
+            this.buttonEditarAdmins.Location = new System.Drawing.Point(260, 10);
             this.buttonEditarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditarAdmins.Name = "buttonEditarAdmins";
             this.buttonEditarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -479,7 +483,7 @@
             this.buttonEliminarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminarAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEliminarAdmins.Location = new System.Drawing.Point(379, 10);
+            this.buttonEliminarAdmins.Location = new System.Drawing.Point(389, 10);
             this.buttonEliminarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEliminarAdmins.Name = "buttonEliminarAdmins";
             this.buttonEliminarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -496,7 +500,7 @@
             this.buttonDesactivarAdmins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDesactivarAdmins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDesactivarAdmins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonDesactivarAdmins.Location = new System.Drawing.Point(505, 10);
+            this.buttonDesactivarAdmins.Location = new System.Drawing.Point(519, 10);
             this.buttonDesactivarAdmins.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDesactivarAdmins.Name = "buttonDesactivarAdmins";
             this.buttonDesactivarAdmins.Size = new System.Drawing.Size(124, 55);
@@ -504,6 +508,7 @@
             this.buttonDesactivarAdmins.Text = "Desactivar";
             this.buttonDesactivarAdmins.UseCompatibleTextRendering = true;
             this.buttonDesactivarAdmins.UseVisualStyleBackColor = false;
+            this.buttonDesactivarAdmins.Visible = false;
             this.buttonDesactivarAdmins.Click += new System.EventHandler(this.buttonDesactivarAdmins_Click);
             // 
             // listViewUsuariosAdministradores
@@ -519,11 +524,11 @@
             this.listViewUsuariosAdministradores.FullRowSelect = true;
             this.listViewUsuariosAdministradores.GridLines = true;
             this.listViewUsuariosAdministradores.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem12});
             this.listViewUsuariosAdministradores.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosAdministradores.MultiSelect = false;
             this.listViewUsuariosAdministradores.Name = "listViewUsuariosAdministradores";
-            this.listViewUsuariosAdministradores.Size = new System.Drawing.Size(631, 351);
+            this.listViewUsuariosAdministradores.Size = new System.Drawing.Size(646, 351);
             this.listViewUsuariosAdministradores.TabIndex = 1;
             this.listViewUsuariosAdministradores.UseCompatibleStateImageBehavior = false;
             this.listViewUsuariosAdministradores.View = System.Windows.Forms.View.Details;
@@ -545,7 +550,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 445);
+            this.tabPage2.Size = new System.Drawing.Size(658, 445);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -561,7 +566,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(637, 439);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(652, 439);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -584,7 +589,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(631, 76);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(646, 76);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // buttonCargaDatosUICT
@@ -594,7 +599,7 @@
             this.buttonCargaDatosUICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosUICT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosUICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosUICT.Location = new System.Drawing.Point(1, 10);
+            this.buttonCargaDatosUICT.Location = new System.Drawing.Point(2, 10);
             this.buttonCargaDatosUICT.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosUICT.Name = "buttonCargaDatosUICT";
             this.buttonCargaDatosUICT.Size = new System.Drawing.Size(124, 55);
@@ -611,7 +616,7 @@
             this.buttonAgregarUsuariosICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarUsuariosICT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarUsuariosICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregarUsuariosICT.Location = new System.Drawing.Point(127, 10);
+            this.buttonAgregarUsuariosICT.Location = new System.Drawing.Point(131, 10);
             this.buttonAgregarUsuariosICT.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAgregarUsuariosICT.Name = "buttonAgregarUsuariosICT";
             this.buttonAgregarUsuariosICT.Size = new System.Drawing.Size(124, 55);
@@ -628,7 +633,7 @@
             this.buttonEditarUICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarUICT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarUICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarUICT.Location = new System.Drawing.Point(253, 10);
+            this.buttonEditarUICT.Location = new System.Drawing.Point(260, 10);
             this.buttonEditarUICT.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditarUICT.Name = "buttonEditarUICT";
             this.buttonEditarUICT.Size = new System.Drawing.Size(124, 55);
@@ -645,7 +650,7 @@
             this.buttonEliminarUsuariosICT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminarUsuariosICT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarUsuariosICT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEliminarUsuariosICT.Location = new System.Drawing.Point(379, 10);
+            this.buttonEliminarUsuariosICT.Location = new System.Drawing.Point(389, 10);
             this.buttonEliminarUsuariosICT.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEliminarUsuariosICT.Name = "buttonEliminarUsuariosICT";
             this.buttonEliminarUsuariosICT.Size = new System.Drawing.Size(124, 55);
@@ -662,7 +667,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button5.Location = new System.Drawing.Point(505, 10);
+            this.button5.Location = new System.Drawing.Point(519, 10);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 55);
@@ -684,10 +689,10 @@
             this.listViewUsuariosICT.FullRowSelect = true;
             this.listViewUsuariosICT.GridLines = true;
             this.listViewUsuariosICT.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem13});
             this.listViewUsuariosICT.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosICT.Name = "listViewUsuariosICT";
-            this.listViewUsuariosICT.Size = new System.Drawing.Size(631, 351);
+            this.listViewUsuariosICT.Size = new System.Drawing.Size(646, 351);
             this.listViewUsuariosICT.TabIndex = 1;
             this.listViewUsuariosICT.UseCompatibleStateImageBehavior = false;
             this.listViewUsuariosICT.View = System.Windows.Forms.View.Details;
@@ -709,7 +714,7 @@
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(643, 445);
+            this.tabPage3.Size = new System.Drawing.Size(658, 445);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -725,7 +730,7 @@
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(643, 445);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(658, 445);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // tableLayoutPanel10
@@ -745,7 +750,7 @@
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(637, 77);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(652, 77);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // buttonCargaDatosUsuariosRegulares
@@ -755,7 +760,7 @@
             this.buttonCargaDatosUsuariosRegulares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosUsuariosRegulares.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosUsuariosRegulares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosUsuariosRegulares.Location = new System.Drawing.Point(1, 11);
+            this.buttonCargaDatosUsuariosRegulares.Location = new System.Drawing.Point(3, 11);
             this.buttonCargaDatosUsuariosRegulares.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosUsuariosRegulares.Name = "buttonCargaDatosUsuariosRegulares";
             this.buttonCargaDatosUsuariosRegulares.Size = new System.Drawing.Size(124, 55);
@@ -772,7 +777,7 @@
             this.buttonDesactivarUsuarioRegular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDesactivarUsuarioRegular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDesactivarUsuarioRegular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonDesactivarUsuarioRegular.Location = new System.Drawing.Point(510, 11);
+            this.buttonDesactivarUsuarioRegular.Location = new System.Drawing.Point(524, 11);
             this.buttonDesactivarUsuarioRegular.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDesactivarUsuarioRegular.Name = "buttonDesactivarUsuarioRegular";
             this.buttonDesactivarUsuarioRegular.Size = new System.Drawing.Size(124, 55);
@@ -789,16 +794,17 @@
             this.listViewUsuariosRegulares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewUsuariosRegulares.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader17});
             this.listViewUsuariosRegulares.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewUsuariosRegulares.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewUsuariosRegulares.FullRowSelect = true;
             this.listViewUsuariosRegulares.GridLines = true;
             this.listViewUsuariosRegulares.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
+            listViewItem14});
             this.listViewUsuariosRegulares.Location = new System.Drawing.Point(3, 3);
             this.listViewUsuariosRegulares.Name = "listViewUsuariosRegulares";
-            this.listViewUsuariosRegulares.Size = new System.Drawing.Size(637, 356);
+            this.listViewUsuariosRegulares.Size = new System.Drawing.Size(652, 356);
             this.listViewUsuariosRegulares.TabIndex = 1;
             this.listViewUsuariosRegulares.UseCompatibleStateImageBehavior = false;
             this.listViewUsuariosRegulares.View = System.Windows.Forms.View.Details;
@@ -812,6 +818,11 @@
             // 
             this.columnHeader4.Text = "Usuario";
             this.columnHeader4.Width = 191;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Habilitado";
+            this.columnHeader17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -830,7 +841,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(643, 445);
+            this.tabPage4.Size = new System.Drawing.Size(658, 445);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -841,12 +852,13 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel12, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.listViewNivelesDificultad, 0, 0);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(630, 432);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(652, 439);
             this.tableLayoutPanel11.TabIndex = 3;
             // 
             // tableLayoutPanel12
@@ -864,12 +876,12 @@
             this.tableLayoutPanel12.Controls.Add(this.buttonAgregarNivelesDificultad, 1, 0);
             this.tableLayoutPanel12.Controls.Add(this.buttonEditarNivelesDificultad, 2, 0);
             this.tableLayoutPanel12.Controls.Add(this.buttonEliminarNivelDificultad, 3, 0);
-            this.tableLayoutPanel12.Controls.Add(this.button11, 4, 0);
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 355);
+            this.tableLayoutPanel12.Controls.Add(this.buttonDesactivarNivelDificultad, 4, 0);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 360);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(624, 74);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(646, 76);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // buttonCargaDatosNivelesDificultad
@@ -879,7 +891,7 @@
             this.buttonCargaDatosNivelesDificultad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosNivelesDificultad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosNivelesDificultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosNivelesDificultad.Location = new System.Drawing.Point(0, 9);
+            this.buttonCargaDatosNivelesDificultad.Location = new System.Drawing.Point(2, 10);
             this.buttonCargaDatosNivelesDificultad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosNivelesDificultad.Name = "buttonCargaDatosNivelesDificultad";
             this.buttonCargaDatosNivelesDificultad.Size = new System.Drawing.Size(124, 55);
@@ -896,7 +908,7 @@
             this.buttonAgregarNivelesDificultad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarNivelesDificultad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarNivelesDificultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregarNivelesDificultad.Location = new System.Drawing.Point(124, 9);
+            this.buttonAgregarNivelesDificultad.Location = new System.Drawing.Point(131, 10);
             this.buttonAgregarNivelesDificultad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAgregarNivelesDificultad.Name = "buttonAgregarNivelesDificultad";
             this.buttonAgregarNivelesDificultad.Size = new System.Drawing.Size(124, 55);
@@ -913,7 +925,7 @@
             this.buttonEditarNivelesDificultad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarNivelesDificultad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarNivelesDificultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarNivelesDificultad.Location = new System.Drawing.Point(248, 9);
+            this.buttonEditarNivelesDificultad.Location = new System.Drawing.Point(260, 10);
             this.buttonEditarNivelesDificultad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditarNivelesDificultad.Name = "buttonEditarNivelesDificultad";
             this.buttonEditarNivelesDificultad.Size = new System.Drawing.Size(124, 55);
@@ -930,7 +942,7 @@
             this.buttonEliminarNivelDificultad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminarNivelDificultad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarNivelDificultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEliminarNivelDificultad.Location = new System.Drawing.Point(372, 9);
+            this.buttonEliminarNivelDificultad.Location = new System.Drawing.Point(389, 10);
             this.buttonEliminarNivelDificultad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEliminarNivelDificultad.Name = "buttonEliminarNivelDificultad";
             this.buttonEliminarNivelDificultad.Size = new System.Drawing.Size(124, 55);
@@ -938,54 +950,64 @@
             this.buttonEliminarNivelDificultad.Text = "Eliminar";
             this.buttonEliminarNivelDificultad.UseCompatibleTextRendering = true;
             this.buttonEliminarNivelDificultad.UseVisualStyleBackColor = false;
+            this.buttonEliminarNivelDificultad.Visible = false;
             this.buttonEliminarNivelDificultad.Click += new System.EventHandler(this.buttonEliminarNivelDificultad_Click);
             // 
-            // button11
+            // buttonDesactivarNivelDificultad
             // 
-            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button11.Location = new System.Drawing.Point(498, 9);
-            this.button11.Margin = new System.Windows.Forms.Padding(0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(124, 55);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "Desactivar(no sirve)";
-            this.button11.UseCompatibleTextRendering = true;
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonDesactivarNivelDificultad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDesactivarNivelDificultad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonDesactivarNivelDificultad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDesactivarNivelDificultad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDesactivarNivelDificultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonDesactivarNivelDificultad.Location = new System.Drawing.Point(519, 10);
+            this.buttonDesactivarNivelDificultad.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDesactivarNivelDificultad.Name = "buttonDesactivarNivelDificultad";
+            this.buttonDesactivarNivelDificultad.Size = new System.Drawing.Size(124, 55);
+            this.buttonDesactivarNivelDificultad.TabIndex = 2;
+            this.buttonDesactivarNivelDificultad.Text = "Desactivar";
+            this.buttonDesactivarNivelDificultad.UseCompatibleTextRendering = true;
+            this.buttonDesactivarNivelDificultad.UseVisualStyleBackColor = false;
+            this.buttonDesactivarNivelDificultad.Click += new System.EventHandler(this.buttonDesactivarNivelDificultad_Click);
             // 
             // listViewNivelesDificultad
             // 
             this.listViewNivelesDificultad.AllowColumnReorder = true;
+            this.listViewNivelesDificultad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewNivelesDificultad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.listViewNivelesDificultad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewNivelesDificultad.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
-            this.columnHeader6});
-            this.listViewNivelesDificultad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.columnHeader6,
+            this.columnHeader13});
             this.listViewNivelesDificultad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewNivelesDificultad.FullRowSelect = true;
             this.listViewNivelesDificultad.GridLines = true;
             this.listViewNivelesDificultad.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem8});
             this.listViewNivelesDificultad.Location = new System.Drawing.Point(3, 3);
             this.listViewNivelesDificultad.Name = "listViewNivelesDificultad";
-            this.listViewNivelesDificultad.Size = new System.Drawing.Size(624, 346);
+            this.listViewNivelesDificultad.Size = new System.Drawing.Size(646, 351);
             this.listViewNivelesDificultad.TabIndex = 1;
             this.listViewNivelesDificultad.UseCompatibleStateImageBehavior = false;
             this.listViewNivelesDificultad.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Nombre";
+            this.columnHeader5.Text = "ID/Nivel Dificultad";
             this.columnHeader5.Width = 316;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Usuario";
+            this.columnHeader6.Text = "Descripcion";
             this.columnHeader6.Width = 191;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Habilitado";
+            this.columnHeader13.Width = 94;
             // 
             // label4
             // 
@@ -1004,7 +1026,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(643, 445);
+            this.tabPage5.Size = new System.Drawing.Size(658, 445);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1015,12 +1037,13 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel14, 0, 1);
             this.tableLayoutPanel13.Controls.Add(this.listViewTipoCaminata, 0, 0);
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(628, 432);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(652, 439);
             this.tableLayoutPanel13.TabIndex = 4;
             // 
             // tableLayoutPanel14
@@ -1038,12 +1061,12 @@
             this.tableLayoutPanel14.Controls.Add(this.buttonAgregarTipoCaminata, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.buttonEditarTipoCaminata, 2, 0);
             this.tableLayoutPanel14.Controls.Add(this.button15, 3, 0);
-            this.tableLayoutPanel14.Controls.Add(this.button16, 4, 0);
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 355);
+            this.tableLayoutPanel14.Controls.Add(this.buttonDesactivarTipoCaminata, 4, 0);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 360);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(622, 74);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(646, 76);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // buttonCargaDatosTipoCaminata
@@ -1053,7 +1076,7 @@
             this.buttonCargaDatosTipoCaminata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosTipoCaminata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosTipoCaminata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosTipoCaminata.Location = new System.Drawing.Point(0, 9);
+            this.buttonCargaDatosTipoCaminata.Location = new System.Drawing.Point(2, 10);
             this.buttonCargaDatosTipoCaminata.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosTipoCaminata.Name = "buttonCargaDatosTipoCaminata";
             this.buttonCargaDatosTipoCaminata.Size = new System.Drawing.Size(124, 55);
@@ -1070,7 +1093,7 @@
             this.buttonAgregarTipoCaminata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregarTipoCaminata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarTipoCaminata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregarTipoCaminata.Location = new System.Drawing.Point(124, 9);
+            this.buttonAgregarTipoCaminata.Location = new System.Drawing.Point(131, 10);
             this.buttonAgregarTipoCaminata.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAgregarTipoCaminata.Name = "buttonAgregarTipoCaminata";
             this.buttonAgregarTipoCaminata.Size = new System.Drawing.Size(124, 55);
@@ -1087,7 +1110,7 @@
             this.buttonEditarTipoCaminata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarTipoCaminata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarTipoCaminata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarTipoCaminata.Location = new System.Drawing.Point(248, 9);
+            this.buttonEditarTipoCaminata.Location = new System.Drawing.Point(260, 10);
             this.buttonEditarTipoCaminata.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditarTipoCaminata.Name = "buttonEditarTipoCaminata";
             this.buttonEditarTipoCaminata.Size = new System.Drawing.Size(124, 55);
@@ -1104,7 +1127,7 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button15.Location = new System.Drawing.Point(372, 9);
+            this.button15.Location = new System.Drawing.Point(389, 10);
             this.button15.Margin = new System.Windows.Forms.Padding(0);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(124, 55);
@@ -1112,22 +1135,24 @@
             this.button15.Text = "Eliminar (no sirve)";
             this.button15.UseCompatibleTextRendering = true;
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Visible = false;
             // 
-            // button16
+            // buttonDesactivarTipoCaminata
             // 
-            this.button16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button16.Location = new System.Drawing.Point(497, 9);
-            this.button16.Margin = new System.Windows.Forms.Padding(0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(124, 55);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "Desactivar (no sirve)";
-            this.button16.UseCompatibleTextRendering = true;
-            this.button16.UseVisualStyleBackColor = false;
+            this.buttonDesactivarTipoCaminata.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDesactivarTipoCaminata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonDesactivarTipoCaminata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDesactivarTipoCaminata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDesactivarTipoCaminata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonDesactivarTipoCaminata.Location = new System.Drawing.Point(519, 10);
+            this.buttonDesactivarTipoCaminata.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDesactivarTipoCaminata.Name = "buttonDesactivarTipoCaminata";
+            this.buttonDesactivarTipoCaminata.Size = new System.Drawing.Size(124, 55);
+            this.buttonDesactivarTipoCaminata.TabIndex = 2;
+            this.buttonDesactivarTipoCaminata.Text = "Desactivar ";
+            this.buttonDesactivarTipoCaminata.UseCompatibleTextRendering = true;
+            this.buttonDesactivarTipoCaminata.UseVisualStyleBackColor = false;
+            this.buttonDesactivarTipoCaminata.Click += new System.EventHandler(this.buttonDesactivarTipoCaminata_Click);
             // 
             // listViewTipoCaminata
             // 
@@ -1136,29 +1161,34 @@
             this.listViewTipoCaminata.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewTipoCaminata.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader8,
+            this.columnHeader14});
             this.listViewTipoCaminata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewTipoCaminata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewTipoCaminata.FullRowSelect = true;
             this.listViewTipoCaminata.GridLines = true;
             this.listViewTipoCaminata.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem9});
             this.listViewTipoCaminata.Location = new System.Drawing.Point(3, 3);
             this.listViewTipoCaminata.Name = "listViewTipoCaminata";
-            this.listViewTipoCaminata.Size = new System.Drawing.Size(622, 346);
+            this.listViewTipoCaminata.Size = new System.Drawing.Size(646, 351);
             this.listViewTipoCaminata.TabIndex = 1;
             this.listViewTipoCaminata.UseCompatibleStateImageBehavior = false;
             this.listViewTipoCaminata.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Nombre";
+            this.columnHeader7.Text = "ID";
             this.columnHeader7.Width = 316;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Usuario";
+            this.columnHeader8.Text = "Descripcion";
             this.columnHeader8.Width = 191;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Habilitado";
             // 
             // label5
             // 
@@ -1177,7 +1207,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(643, 445);
+            this.tabPage6.Size = new System.Drawing.Size(658, 445);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1188,12 +1218,13 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel16, 0, 1);
             this.tableLayoutPanel15.Controls.Add(this.listViewNivelesPrecio, 0, 0);
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 2;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(628, 430);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(652, 439);
             this.tableLayoutPanel15.TabIndex = 4;
             // 
             // tableLayoutPanel16
@@ -1211,12 +1242,12 @@
             this.tableLayoutPanel16.Controls.Add(this.buttonAgregaNivelesPrecio, 1, 0);
             this.tableLayoutPanel16.Controls.Add(this.buttonEditaNivelesPrecio, 2, 0);
             this.tableLayoutPanel16.Controls.Add(this.button20, 3, 0);
-            this.tableLayoutPanel16.Controls.Add(this.button21, 4, 0);
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 353);
+            this.tableLayoutPanel16.Controls.Add(this.buttonDesactivarNivelesPrecio, 4, 0);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 360);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(622, 74);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(646, 76);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // buttonCargaDatosNivelesPrecio
@@ -1226,7 +1257,7 @@
             this.buttonCargaDatosNivelesPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosNivelesPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosNivelesPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosNivelesPrecio.Location = new System.Drawing.Point(0, 9);
+            this.buttonCargaDatosNivelesPrecio.Location = new System.Drawing.Point(2, 10);
             this.buttonCargaDatosNivelesPrecio.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosNivelesPrecio.Name = "buttonCargaDatosNivelesPrecio";
             this.buttonCargaDatosNivelesPrecio.Size = new System.Drawing.Size(124, 55);
@@ -1243,7 +1274,7 @@
             this.buttonAgregaNivelesPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAgregaNivelesPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregaNivelesPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonAgregaNivelesPrecio.Location = new System.Drawing.Point(124, 9);
+            this.buttonAgregaNivelesPrecio.Location = new System.Drawing.Point(131, 10);
             this.buttonAgregaNivelesPrecio.Margin = new System.Windows.Forms.Padding(0);
             this.buttonAgregaNivelesPrecio.Name = "buttonAgregaNivelesPrecio";
             this.buttonAgregaNivelesPrecio.Size = new System.Drawing.Size(124, 55);
@@ -1260,7 +1291,7 @@
             this.buttonEditaNivelesPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditaNivelesPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditaNivelesPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditaNivelesPrecio.Location = new System.Drawing.Point(248, 9);
+            this.buttonEditaNivelesPrecio.Location = new System.Drawing.Point(260, 10);
             this.buttonEditaNivelesPrecio.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditaNivelesPrecio.Name = "buttonEditaNivelesPrecio";
             this.buttonEditaNivelesPrecio.Size = new System.Drawing.Size(124, 55);
@@ -1277,7 +1308,7 @@
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button20.Location = new System.Drawing.Point(372, 9);
+            this.button20.Location = new System.Drawing.Point(389, 10);
             this.button20.Margin = new System.Windows.Forms.Padding(0);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(124, 55);
@@ -1285,22 +1316,24 @@
             this.button20.Text = "Eliminar  (no funciona)";
             this.button20.UseCompatibleTextRendering = true;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Visible = false;
             // 
-            // button21
+            // buttonDesactivarNivelesPrecio
             // 
-            this.button21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.button21.Location = new System.Drawing.Point(497, 9);
-            this.button21.Margin = new System.Windows.Forms.Padding(0);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(124, 55);
-            this.button21.TabIndex = 2;
-            this.button21.Text = "Desactivar (no funciona)";
-            this.button21.UseCompatibleTextRendering = true;
-            this.button21.UseVisualStyleBackColor = false;
+            this.buttonDesactivarNivelesPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonDesactivarNivelesPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonDesactivarNivelesPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDesactivarNivelesPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDesactivarNivelesPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonDesactivarNivelesPrecio.Location = new System.Drawing.Point(519, 10);
+            this.buttonDesactivarNivelesPrecio.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDesactivarNivelesPrecio.Name = "buttonDesactivarNivelesPrecio";
+            this.buttonDesactivarNivelesPrecio.Size = new System.Drawing.Size(124, 55);
+            this.buttonDesactivarNivelesPrecio.TabIndex = 2;
+            this.buttonDesactivarNivelesPrecio.Text = "Desactivar";
+            this.buttonDesactivarNivelesPrecio.UseCompatibleTextRendering = true;
+            this.buttonDesactivarNivelesPrecio.UseVisualStyleBackColor = false;
+            this.buttonDesactivarNivelesPrecio.Click += new System.EventHandler(this.buttonDesactivarNivelesPrecio_Click);
             // 
             // listViewNivelesPrecio
             // 
@@ -1309,29 +1342,34 @@
             this.listViewNivelesPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewNivelesPrecio.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader9,
-            this.columnHeader10});
+            this.columnHeader10,
+            this.columnHeader15});
             this.listViewNivelesPrecio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewNivelesPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewNivelesPrecio.FullRowSelect = true;
             this.listViewNivelesPrecio.GridLines = true;
             this.listViewNivelesPrecio.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
+            listViewItem10});
             this.listViewNivelesPrecio.Location = new System.Drawing.Point(3, 3);
             this.listViewNivelesPrecio.Name = "listViewNivelesPrecio";
-            this.listViewNivelesPrecio.Size = new System.Drawing.Size(622, 344);
+            this.listViewNivelesPrecio.Size = new System.Drawing.Size(646, 351);
             this.listViewNivelesPrecio.TabIndex = 1;
             this.listViewNivelesPrecio.UseCompatibleStateImageBehavior = false;
             this.listViewNivelesPrecio.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Nombre";
+            this.columnHeader9.Text = "Nivel/ID";
             this.columnHeader9.Width = 316;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Usuario";
+            this.columnHeader10.Text = "Descripcion";
             this.columnHeader10.Width = 191;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Habilitado";
             // 
             // label6
             // 
@@ -1350,7 +1388,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(643, 445);
+            this.tabPage7.Size = new System.Drawing.Size(658, 445);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1361,12 +1399,13 @@
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.21145F));
             this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 0, 1);
             this.tableLayoutPanel17.Controls.Add(this.listViewNivelesCalidad, 0, 0);
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(7, 7);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 2;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.50851F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.49148F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(630, 430);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(652, 439);
             this.tableLayoutPanel17.TabIndex = 4;
             // 
             // tableLayoutPanel18
@@ -1385,11 +1424,11 @@
             this.tableLayoutPanel18.Controls.Add(this.buttonEditarNivelesCalidad, 2, 0);
             this.tableLayoutPanel18.Controls.Add(this.buttonEliminarNivelesCalidad, 3, 0);
             this.tableLayoutPanel18.Controls.Add(this.buttonDesactivarNivelesCalidad, 4, 0);
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 353);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 360);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(624, 74);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(646, 76);
             this.tableLayoutPanel18.TabIndex = 0;
             // 
             // buttonCargaDatosNivelesCalidad
@@ -1399,7 +1438,7 @@
             this.buttonCargaDatosNivelesCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCargaDatosNivelesCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCargaDatosNivelesCalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonCargaDatosNivelesCalidad.Location = new System.Drawing.Point(0, 9);
+            this.buttonCargaDatosNivelesCalidad.Location = new System.Drawing.Point(2, 10);
             this.buttonCargaDatosNivelesCalidad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonCargaDatosNivelesCalidad.Name = "buttonCargaDatosNivelesCalidad";
             this.buttonCargaDatosNivelesCalidad.Size = new System.Drawing.Size(124, 55);
@@ -1416,7 +1455,7 @@
             this.buttonbuttonAgregarNivelesCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonbuttonAgregarNivelesCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonbuttonAgregarNivelesCalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonbuttonAgregarNivelesCalidad.Location = new System.Drawing.Point(124, 9);
+            this.buttonbuttonAgregarNivelesCalidad.Location = new System.Drawing.Point(131, 10);
             this.buttonbuttonAgregarNivelesCalidad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonbuttonAgregarNivelesCalidad.Name = "buttonbuttonAgregarNivelesCalidad";
             this.buttonbuttonAgregarNivelesCalidad.Size = new System.Drawing.Size(124, 55);
@@ -1433,7 +1472,7 @@
             this.buttonEditarNivelesCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditarNivelesCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarNivelesCalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEditarNivelesCalidad.Location = new System.Drawing.Point(248, 9);
+            this.buttonEditarNivelesCalidad.Location = new System.Drawing.Point(260, 10);
             this.buttonEditarNivelesCalidad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEditarNivelesCalidad.Name = "buttonEditarNivelesCalidad";
             this.buttonEditarNivelesCalidad.Size = new System.Drawing.Size(124, 55);
@@ -1450,7 +1489,7 @@
             this.buttonEliminarNivelesCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminarNivelesCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarNivelesCalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonEliminarNivelesCalidad.Location = new System.Drawing.Point(372, 9);
+            this.buttonEliminarNivelesCalidad.Location = new System.Drawing.Point(389, 10);
             this.buttonEliminarNivelesCalidad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEliminarNivelesCalidad.Name = "buttonEliminarNivelesCalidad";
             this.buttonEliminarNivelesCalidad.Size = new System.Drawing.Size(124, 55);
@@ -1458,6 +1497,7 @@
             this.buttonEliminarNivelesCalidad.Text = "Eliminar (no funciona)";
             this.buttonEliminarNivelesCalidad.UseCompatibleTextRendering = true;
             this.buttonEliminarNivelesCalidad.UseVisualStyleBackColor = false;
+            this.buttonEliminarNivelesCalidad.Visible = false;
             // 
             // buttonDesactivarNivelesCalidad
             // 
@@ -1466,14 +1506,15 @@
             this.buttonDesactivarNivelesCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDesactivarNivelesCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDesactivarNivelesCalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.buttonDesactivarNivelesCalidad.Location = new System.Drawing.Point(498, 9);
+            this.buttonDesactivarNivelesCalidad.Location = new System.Drawing.Point(519, 10);
             this.buttonDesactivarNivelesCalidad.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDesactivarNivelesCalidad.Name = "buttonDesactivarNivelesCalidad";
             this.buttonDesactivarNivelesCalidad.Size = new System.Drawing.Size(124, 55);
             this.buttonDesactivarNivelesCalidad.TabIndex = 2;
-            this.buttonDesactivarNivelesCalidad.Text = "Desactivar (no funciona)";
+            this.buttonDesactivarNivelesCalidad.Text = "Desactivar ";
             this.buttonDesactivarNivelesCalidad.UseCompatibleTextRendering = true;
             this.buttonDesactivarNivelesCalidad.UseVisualStyleBackColor = false;
+            this.buttonDesactivarNivelesCalidad.Click += new System.EventHandler(this.buttonDesactivarNivelesCalidad_Click);
             // 
             // listViewNivelesCalidad
             // 
@@ -1482,29 +1523,34 @@
             this.listViewNivelesCalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listViewNivelesCalidad.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11,
-            this.columnHeader12});
+            this.columnHeader12,
+            this.columnHeader16});
             this.listViewNivelesCalidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewNivelesCalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.listViewNivelesCalidad.FullRowSelect = true;
             this.listViewNivelesCalidad.GridLines = true;
             this.listViewNivelesCalidad.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7});
+            listViewItem11});
             this.listViewNivelesCalidad.Location = new System.Drawing.Point(3, 3);
             this.listViewNivelesCalidad.Name = "listViewNivelesCalidad";
-            this.listViewNivelesCalidad.Size = new System.Drawing.Size(624, 344);
+            this.listViewNivelesCalidad.Size = new System.Drawing.Size(646, 351);
             this.listViewNivelesCalidad.TabIndex = 1;
             this.listViewNivelesCalidad.UseCompatibleStateImageBehavior = false;
             this.listViewNivelesCalidad.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader11
             // 
-            this.columnHeader11.Text = "Nombre";
+            this.columnHeader11.Text = "Nivel/ID";
             this.columnHeader11.Width = 316;
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "Usuario";
+            this.columnHeader12.Text = "Descripcion";
             this.columnHeader12.Width = 191;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Habilitado";
             // 
             // label7
             // 
@@ -1519,56 +1565,42 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.34609F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.65391F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel3.Controls.Add(this.labelCloseButton, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.labelMinimiza, 1, 0);
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.42342F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.57658F));
+            this.tableLayoutPanel3.Controls.Add(this.buttonBitacora, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(201, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(205, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.05882F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.94118F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(651, 68);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(666, 68);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // labelCloseButton
+            // buttonBitacora
             // 
-            this.labelCloseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelCloseButton.AutoSize = true;
-            this.labelCloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCloseButton.Location = new System.Drawing.Point(608, 5);
-            this.labelCloseButton.Name = "labelCloseButton";
-            this.labelCloseButton.Size = new System.Drawing.Size(20, 20);
-            this.labelCloseButton.TabIndex = 0;
-            this.labelCloseButton.Text = "X";
-            this.labelCloseButton.Click += new System.EventHandler(this.labelCloseButton_Click_1);
-            this.labelCloseButton.MouseEnter += new System.EventHandler(this.labelCloseButton_MouseEnter);
-            this.labelCloseButton.MouseLeave += new System.EventHandler(this.labelCloseButton_MouseLeave);
-            // 
-            // labelMinimiza
-            // 
-            this.labelMinimiza.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelMinimiza.AutoSize = true;
-            this.labelMinimiza.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMinimiza.Location = new System.Drawing.Point(554, 5);
-            this.labelMinimiza.Name = "labelMinimiza";
-            this.labelMinimiza.Size = new System.Drawing.Size(18, 20);
-            this.labelMinimiza.TabIndex = 1;
-            this.labelMinimiza.Text = "_";
-            this.labelMinimiza.Click += new System.EventHandler(this.labelMinimiza_Click);
-            this.labelMinimiza.MouseEnter += new System.EventHandler(this.labelMinimiza_MouseEnter);
-            this.labelMinimiza.MouseLeave += new System.EventHandler(this.labelMinimiza_MouseLeave);
+            this.buttonBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(85)))), ((int)(((byte)(100)))));
+            this.buttonBitacora.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBitacora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
+            this.buttonBitacora.Location = new System.Drawing.Point(489, 0);
+            this.buttonBitacora.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonBitacora.Name = "buttonBitacora";
+            this.buttonBitacora.Size = new System.Drawing.Size(177, 68);
+            this.buttonBitacora.TabIndex = 4;
+            this.buttonBitacora.Text = "Bitacora";
+            this.buttonBitacora.UseCompatibleTextRendering = true;
+            this.buttonBitacora.UseVisualStyleBackColor = false;
+            this.buttonBitacora.Click += new System.EventHandler(this.buttonBitacora_Click);
             // 
             // PanelControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(192)))), ((int)(((byte)(206)))));
-            this.ClientSize = new System.Drawing.Size(852, 541);
+            this.ClientSize = new System.Drawing.Size(871, 541);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "PanelControl";
             this.Text = "PanelControl";
@@ -1604,7 +1636,6 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1667,7 +1698,7 @@
         private System.Windows.Forms.Button buttonAgregarNivelesDificultad;
         private System.Windows.Forms.Button buttonEditarNivelesDificultad;
         private System.Windows.Forms.Button buttonEliminarNivelDificultad;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button buttonDesactivarNivelDificultad;
         private System.Windows.Forms.ListView listViewNivelesDificultad;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
@@ -1677,7 +1708,7 @@
         private System.Windows.Forms.Button buttonAgregarTipoCaminata;
         private System.Windows.Forms.Button buttonEditarTipoCaminata;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button buttonDesactivarTipoCaminata;
         private System.Windows.Forms.ListView listViewTipoCaminata;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
@@ -1687,7 +1718,7 @@
         private System.Windows.Forms.Button buttonAgregaNivelesPrecio;
         private System.Windows.Forms.Button buttonEditaNivelesPrecio;
         private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button buttonDesactivarNivelesPrecio;
         private System.Windows.Forms.ListView listViewNivelesPrecio;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
@@ -1702,8 +1733,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label labelCloseButton;
-        private System.Windows.Forms.Label labelMinimiza;
         private System.Windows.Forms.Button buttonCargaDatosUsuariosRegulares;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.Button buttonBitacora;
     }
 }

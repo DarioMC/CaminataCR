@@ -31,5 +31,10 @@ namespace BusinessLayer
         {
             conexionSQL.getInstance().agregarTipoCaminata(tipo);
         }
+        
+        public void desactivarTipo(TipoCaminata tipo)
+        {
+            conexionSQL.getInstance().desactivarTipoCaminata(tipo);
+        }
     }
 }

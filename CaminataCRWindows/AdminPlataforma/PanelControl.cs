@@ -140,10 +140,10 @@ namespace AdminPlataforma
         {
 
             int indexAdminListView = listViewUsuariosAdministradores.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexAdminListView.ToString());
+            //MessageBox.Show("Index: " + indexAdminListView.ToString());
 
             Administrador admin = SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores[indexAdminListView];
-            MessageBox.Show("Usuario: " + admin.alias);
+            //MessageBox.Show("Usuario: " + admin.alias);
 
 
             this.Hide();
@@ -171,7 +171,7 @@ namespace AdminPlataforma
             SesionActual.getInstance().modUsuariosAdministrador.listaAdministradores.RemoveAt(indexAdminListView);
             SesionActual.getInstance().modUsuariosAdministrador.borrarAdministrador(admin);
 
-            MessageBox.Show("Index: " + indexAdminListView.ToString() + " Usuario: " + admin.alias);
+            //MessageBox.Show("Index: " + indexAdminListView.ToString() + " Usuario: " + admin.alias);
         }
 
 
@@ -218,11 +218,21 @@ namespace AdminPlataforma
 
         private void buttonEliminarUsuariosICT_Click(object sender, EventArgs e)
         {
-            int index = listViewUsuariosICT.SelectedIndices[0];
+            try
+            {
+                int index = listViewUsuariosICT.SelectedIndices[0];
 
-            UsuarioICT usuario = SesionActual.getInstance().modUsuariosICT.listaUsuarios[index];
-            SesionActual.getInstance().modUsuariosICT.listaUsuarios.RemoveAt(index);
-            SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
+                UsuarioICT usuario = SesionActual.getInstance().modUsuariosICT.listaUsuarios[index];
+                SesionActual.getInstance().modUsuariosICT.listaUsuarios.RemoveAt(index);
+                SesionActual.getInstance().modUsuariosICT.borrarUsuarioICT(usuario);
+                MessageBox.Show("Usuario Borrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se borro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
 
@@ -230,10 +240,10 @@ namespace AdminPlataforma
         private void buttonEditarUICT_Click(object sender, EventArgs e)
         {
             int indexAdminListView = listViewUsuariosICT.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexAdminListView.ToString());
+            //MessageBox.Show("Index: " + indexAdminListView.ToString());
 
             UsuarioICT user = SesionActual.getInstance().modUsuariosICT.listaUsuarios[indexAdminListView];
-            MessageBox.Show("Usuario: " + user.alias);
+            //MessageBox.Show("Usuario: " + user.alias);
 
 
             this.Hide();
@@ -254,10 +264,12 @@ namespace AdminPlataforma
         private void buttonCargaDatosNivelesDificultad_Click(object sender, EventArgs e)
         {
             listViewNivelesDificultad.Items.Clear();
+            SesionActual.getInstance().modNivDificultad.cargaNiveles();
             foreach (Dificultad dificultad in SesionActual.getInstance().modNivDificultad.listaDificultades)
             {
                 ListViewItem linea = new ListViewItem(dificultad.idNivel.ToString());
                 linea.SubItems.Add(dificultad.descripcion);
+                linea.SubItems.Add(dificultad.habilitado.ToString());
                 listViewNivelesDificultad.Items.Add(linea);
             }
         }
@@ -266,10 +278,8 @@ namespace AdminPlataforma
         {
 
             int indexNivelDificultadListView = listViewNivelesDificultad.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexNivelDificultadListView.ToString());
 
             Dificultad dificultad = SesionActual.getInstance().modNivDificultad.listaDificultades[indexNivelDificultadListView];
-            MessageBox.Show("Usuario: " + dificultad.descripcion);
 
             // codigo template
 
@@ -292,6 +302,27 @@ namespace AdminPlataforma
 
         }
 
+        private void buttonDesactivarNivelDificultad_Click(object sender, EventArgs e)
+        {
+            int indexNivelDificultadListView = listViewNivelesDificultad.SelectedIndices[0];
+
+            Dificultad dificultad = SesionActual.getInstance().modNivDificultad.listaDificultades[indexNivelDificultadListView];
+
+
+            try
+            {
+                SesionActual.getInstance().modNivDificultad.inactivarDificultad(dificultad);
+
+                MessageBox.Show("Nivel Desactivado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "No se desactivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
         // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
         // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
         // ----------------------------------------------------- MODULO USUARIOS REGULARES -----------------------------------------------------
@@ -306,6 +337,7 @@ namespace AdminPlataforma
             {
                 ListViewItem linea = new ListViewItem(user.primerNombre);
                 linea.SubItems.Add(user.alias);
+                linea.SubItems.Add(user.habilitado.ToString());
                 listViewUsuariosRegulares.Items.Add(linea);
             }
         }
@@ -313,10 +345,10 @@ namespace AdminPlataforma
         private void buttonDesactivarUsuarioRegular_Click(object sender, EventArgs e)
         {
             int indexAdminListView = listViewUsuariosRegulares.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexAdminListView.ToString());
+            //MessageBox.Show("Index: " + indexAdminListView.ToString());
 
             Hiker user = SesionActual.getInstance().modUsuariosRegulares.listaHikers[indexAdminListView];
-            MessageBox.Show("Usuario: " + user.alias);
+            //MessageBox.Show("Usuario: " + user.alias);
 
 
             try
@@ -355,10 +387,10 @@ namespace AdminPlataforma
         private void buttonEditarTipoCaminata_Click(object sender, EventArgs e)
         {
             int indexTipoCaminataListView = listViewTipoCaminata.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexTipoCaminataListView.ToString());
+            //MessageBox.Show("Index: " + indexTipoCaminataListView.ToString());
 
             TipoCaminata tipo = SesionActual.getInstance().modTipoCaminata.listaTiposCaminata[indexTipoCaminataListView];
-            MessageBox.Show("Usuario: " + tipo.descripcion);
+            //MessageBox.Show("Usuario: " + tipo.descripcion);
 
             // codigo template
 
@@ -376,6 +408,24 @@ namespace AdminPlataforma
             this.Show();
         }
 
+        private void buttonDesactivarTipoCaminata_Click(object sender, EventArgs e)
+        {
+            int indexTipoCaminataListView = listViewTipoCaminata.SelectedIndices[0];
+
+            TipoCaminata tipo = SesionActual.getInstance().modTipoCaminata.listaTiposCaminata[indexTipoCaminataListView];
+
+            try
+            {
+                SesionActual.getInstance().modTipoCaminata.desactivarTipo(tipo);
+
+                MessageBox.Show("Tipo Desactivado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "No se desactivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
         // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
@@ -390,6 +440,7 @@ namespace AdminPlataforma
             {
                 ListViewItem linea = new ListViewItem(nivel.idNivelPrecio.ToString());
                 linea.SubItems.Add(nivel.descripcion);
+                linea.SubItems.Add(nivel.habilitado.ToString());
                 listViewNivelesPrecio.Items.Add(linea);
             }
         }
@@ -405,10 +456,10 @@ namespace AdminPlataforma
         private void buttonEditaNivelesPrecio_Click(object sender, EventArgs e)
         {
             int indexNivelPrecioListView = listViewNivelesPrecio.SelectedIndices[0];
-            MessageBox.Show("Index: " + indexNivelPrecioListView.ToString());
+            //MessageBox.Show("Index: " + indexNivelPrecioListView.ToString());
 
             NivelPrecio tipo = SesionActual.getInstance().modNivPrecio.listaNivelPrecio[indexNivelPrecioListView];
-            MessageBox.Show("Nivel: " + tipo.idNivelPrecio);
+            //MessageBox.Show("Nivel: " + tipo.idNivelPrecio);
 
             // codigo template
 
@@ -418,10 +469,27 @@ namespace AdminPlataforma
             this.Show();
         }
 
-        // ----------------------------------------------------- MODULO NIVELES CALIDAD -----------------------------------------------------
-        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
-        // ----------------------------------------------------- MODULO NIVELES PRECIO -----------------------------------------------------
+        private void buttonDesactivarNivelesPrecio_Click(object sender, EventArgs e)
+        {
+            int indexNivelPrecioListView = listViewNivelesPrecio.SelectedIndices[0];
 
+            NivelPrecio tipo = SesionActual.getInstance().modNivPrecio.listaNivelPrecio[indexNivelPrecioListView];
+
+            try
+            {
+                SesionActual.getInstance().modNivPrecio.inactivarNivelPrecio(tipo);
+
+                MessageBox.Show("Nivel Desactivado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "No se desactivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // ----------------------------------------------------- MODULO NIVELES CALIDAD -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES CALIDAD -----------------------------------------------------
+        // ----------------------------------------------------- MODULO NIVELES CALIDAD -----------------------------------------------------
 
 
         private void buttonCargaDatosNivelesCalidad_Click(object sender, EventArgs e)
@@ -433,6 +501,7 @@ namespace AdminPlataforma
             {
                 ListViewItem linea = new ListViewItem(nivel.idNivelCalidad.ToString());
                 linea.SubItems.Add(nivel.descripcion);
+                linea.SubItems.Add(nivel.habilitado.ToString());
                 listViewNivelesCalidad.Items.Add(linea);
             }
         }
@@ -448,15 +517,44 @@ namespace AdminPlataforma
         private void buttonEditarNivelesCalidad_Click(object sender, EventArgs e)
         {
             int indexNivelCalidadListView = listViewNivelesCalidad.SelectedIndices[0];
-            MessageBox.Show("Index: " + listViewNivelesCalidad.ToString());
+            //MessageBox.Show("Index: " + listViewNivelesCalidad.ToString());
 
             NivelCalidad tipo = SesionActual.getInstance().modNivCalidad.listaNivelCalidad[indexNivelCalidadListView];
-            MessageBox.Show("Nivel: " + tipo.idNivelCalidad);
+            //MessageBox.Show("Nivel: " + tipo.idNivelCalidad);
 
             // codigo template
 
             this.Hide();
             NCEditarNivelCalidad window = new NCEditarNivelCalidad(tipo);
+            window.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonDesactivarNivelesCalidad_Click(object sender, EventArgs e)
+        {
+            int indexNivelCalidadListView = listViewNivelesCalidad.SelectedIndices[0];
+            //MessageBox.Show("Index: " + listViewNivelesCalidad.ToString());
+
+            NivelCalidad tipo = SesionActual.getInstance().modNivCalidad.listaNivelCalidad[indexNivelCalidadListView];
+            //MessageBox.Show("Nivel: " + tipo.idNivelCalidad);
+
+
+            try
+            {
+                SesionActual.getInstance().modNivCalidad.inactivarNivelCalidad(tipo);
+
+                MessageBox.Show("Nivel Desactivado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "No se desactivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonBitacora_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bitacora window = new Bitacora();
             window.ShowDialog();
             this.Show();
         }

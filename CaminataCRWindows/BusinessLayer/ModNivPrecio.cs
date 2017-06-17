@@ -31,5 +31,10 @@ namespace BusinessLayer
         {
             conexionSQL.getInstance().editarNivelPrecio(nivel);
         }
+
+        public void inactivarNivelPrecio(NivelPrecio nivel)
+        {
+            conexionSQL.getInstance().desactivarNivelPrecio(nivel);
+        }
     }
 }

@@ -54,5 +54,10 @@ namespace BusinessLayer
                 throw new Exception("contraseña invalida o el usuario no existe");
             }
         }
+
+        public List<EntradaBitacora> seleccionarBitacora(DateTime fechaInicio, DateTime fechaFinal, string tipoAccion, string objeto, int horaInicial, int horaFinal)
+        {
+            return conexionSQL.getInstance().seleccionarBitacora(fechaInicio, fechaFinal, tipoAccion, objeto, horaInicial, horaFinal);
+        }
     }
 }

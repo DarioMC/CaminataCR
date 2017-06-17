@@ -39,6 +39,7 @@ namespace AdminPlataforma
             try
             {
                 string fecha = this.dateTimePickerFechaNac.Value.ToString("yyyy-MM-dd");
+
                 SesionActual.getInstance().modUsuariosAdministrador.agregarAdministrador(
                     this.textBoxUsuario.Text, this.textBoxContrasena.Text,
                     this.textBoxNombre.Text, this.textBoxPrimerApellido.Text,

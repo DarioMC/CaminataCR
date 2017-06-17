@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Administrador.cs" />
     <Compile Include="CaminataLikes.cs" />
+    <Compile Include="ClasificacionRuta.cs" />
     <Compile Include="Dificultad.cs" />
+    <Compile Include="EntradaBitacora.cs" />
     <Compile Include="Hiker.cs" />
     <Compile Include="NivelCalidad.cs" />
     <Compile Include="NivelDificultad.cs" />
