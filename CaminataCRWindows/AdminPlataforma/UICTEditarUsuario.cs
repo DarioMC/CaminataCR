@@ -42,7 +42,7 @@ namespace AdminPlataforma
                 admin.primerApellido = this.textBoxPrimerApellido.Text;
                 admin.fechaNac = this.dateTimePickerFechaNac.Value;
                 admin.contrasena = textBoxContrasena.Text;
-
+                int ced = int.Parse(textBoxCedula.Text);
                 ContrasenaEncriptada contrasenaEncriptada;
                 contrasenaEncriptada = new ContrasenaEncriptada(admin.contrasena);
                 admin.contrasena = contrasenaEncriptada.getContrasenaEncriptadaTira();

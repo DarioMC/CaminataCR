@@ -39,7 +39,7 @@ namespace AdminPlataforma
                 admin.primerNombre = this.textBoxNombre.Text;
                 admin.fechaNac = fecha;
                 admin.cedula = this.textBoxCedula.Text;
-
+                int ced = int.Parse(textBoxCedula.Text);
 
                 ContrasenaEncriptada contrasenaEncriptada;
                 contrasenaEncriptada = new ContrasenaEncriptada(admin.contrasena);

@@ -22,6 +22,7 @@ namespace AdminPlataforma
         {
             try
             {
+                int ced = int.Parse(textBoxCedula.Text);
                 string fecha = this.dateTimePickerFechaNac.Value.ToString("yyyy-MM-dd");
                 SesionActual.getInstance().modUsuariosICT.agregarUsuarioICT(
                     this.textBoxUsuario.Text, this.textBoxContrasena.Text,
